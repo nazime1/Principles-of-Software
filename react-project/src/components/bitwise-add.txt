@@ -1,0 +1,22 @@
+method add(i1: int, i2: int) returns (result: int)
+  requires i1 >= 0 && i2 >= 0
+  ensures result == i1 + i2
+{
+  result := 0;
+  var x := i1;
+  var y := i2;
+  var u := 1;
+  var v := 0;
+  while (x > 0 || y > 0)
+    invariant //fill in invariant
+    decreases //fill in decreases
+  {
+    v := v + x % 2 + y % 2;
+    x := x / 2;
+    y := y / 2; 
+    result := result + u * (v % 2);
+    u := 2 * u;
+    v := v / 2;
+  }
+  result := result + u * v;
+}
