@@ -2,11 +2,11 @@
   "name": "editor",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost/compile",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "@uiw/react-codemirror": "^4.22.2",
     "codemirror": "^5.59.1",
     "cors": "^2.8.5",
     "react": "^17.0.1",

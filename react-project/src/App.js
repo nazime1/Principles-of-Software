@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>Welcome to the edior</p>
+      <p>Try your hand at filling in the comments and compiling your own Dafny code!</p>
       <div className="editor-container">
         {
           openedEditor === 'dafny' ? (
@@ -61,24 +61,19 @@ function App() {
         }
       </div>
     <Button title="Run" onClick={() => {
-          var text = "method add(i1: int, i2: int) returns (result: int)\nrequires i1 >= 0 && i2 >= 0\nensures result == i1 + i2\n{\nresult := 0;\nvar x := i1;\nvar y := i2;\nvar u := 1;\nvar v := 0;\nwhile (x > 0 || y > 0)\ninvariant i1 + i2 == result + u * (x + y + v) && x >= 0 && y >= 0 \ndecreases x + y\n{\nv := v + x % 2 + y % 2;\nx := x / 2;\ny := y / 2; \nresult := result + u * (v % 2);\nu := 2 * u;\nv := v / 2;\n}\nresult := result + u * v;\n}"
           var obj = {
             requester: "postman",
             files: [
             {
             name: "problem.dfy",
-            content: text
+            content: Editor.value,
             }
           ]
         }
         const dataToSend = JSON.stringify(obj);
-        var xhr = new XMLHttpRequest({mozSystem: true});
+        var xhr = new XMLHttpRequest();
         var url = "http://localhost/compile";
         xhr.open("POST", url, true);
-        /*xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        xhr.setRequestHeader("Access-Control-Allow-Origin", "http://localhost/compile");
-        xhr.setRequestHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");*/
         xhr.onreadystatechange = function () {
         if (xhr.status === 200) {
           <div>
