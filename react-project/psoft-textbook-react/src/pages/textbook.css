@@ -1,0 +1,21 @@
+.logo {
+	width: 400px;
+	height: 400px;
+    margin: auto;
+}
+
+.main-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+  }
+}

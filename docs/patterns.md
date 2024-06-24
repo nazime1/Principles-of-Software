@@ -28,12 +28,12 @@ Here is some UML notation:
 - *Italics* denote abstract types
 - Dotted lines between classes denote interface inheritance
 
-![](images/uml1.png)
-![](images/uml2.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/uml1.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/uml2.png)
 
 UML associations often represent a composition relationship; objects of one class enclose objects of another.  Thus, UML is often used to model abstract concepts and their relationships.  Attributes and associations correspond to ADT operations.  UML can express designs - there is a close correspondence to implementation.  Attributes and associates correspond to representation fields.
 
-![](images/graphuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/graphuml.png)
 
 ## Creational Patterns
 
@@ -153,7 +153,7 @@ BCSF and HCSF are next.  Notice how, in the extended classes, there are differen
 
 The UML diagram for this `AbstractSoupFactory` system is pictured below:
 
-![](images/abstractuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/abstractuml.png)
 
 ### Builder
 
@@ -575,7 +575,7 @@ Featured below is the code for some additional subclasses:
 
 This factory method example also uses the `Soup.java` subclass.  Pictured below is the UML diagram for the factory system:
 
-![](images/factoryuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/builderuml.png)
 
 ### Prototype
 
@@ -623,7 +623,7 @@ Concrete prototype objects (`SoupSpoon.java`, `SaladSpoon.java`, `SaladFork.java
 
 Notice how these classes are all minimal compared to the abstract classes they extend.  The difference in scale is a symptom of modularity and inheritance, and keeps code readable and organized.  The UML for this prototype example follows:
 
-![](images\protouml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/protouml.png)
 
 ### Singleton
 
@@ -682,7 +682,7 @@ Example code is shown below:
 
 The UML diagram for this example is featured below:
 
-![](images/singleuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/singleuml.png)
 
 ## Structural Patterns
 
@@ -752,13 +752,13 @@ Finally, the `TeaCup.java` class accepts the adapter and adaptee to allow users 
 
 Notice how the root class is uncomplicated and has exactly as many extensions as the functionality requires.  Thus, the Singleton pattern shows why we use design patterns: they make life easier.  The UML diagram for this example is shown below:
 
-![](images\adapteruml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/adapteruml.png)
 
 ### Bridge
 
 The **Bridge** pattern <span style="color:blue;">decouples an abstraction from its implementation so that the two can vary independently</span>.  The UML diagram below illustrates the Bridge structure well:
 
-![](images/bridgeuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/bridgeuml.png)
 
 Notice how the abstract soda class and the actual soda implementation are distinctly separated.  The code abstract `Soda.java` class, along with its abstract extending classes `MediumSoda.java` and `SuperSizeSoda.java`, is featured below:
 
@@ -944,7 +944,7 @@ The **Composite** design pattern <span style="color:blue;">allows developers to 
 
 The UML diagram for this example is pictured below:
 
-![](images\compuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/compuml.png)
 
 ### Decorator or Wrapper
 
@@ -1012,7 +1012,7 @@ For example, a decorator class (`ChaiDecorator.java` here) takes in a delegate c
 
 The UML diagram for this relationship is featured below:
 
-![](images\decuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/decuml.png)
 
 ### Facade
 
@@ -1136,7 +1136,7 @@ Below are four classes: `FacadeCuppaMaker.java`, the facade in the system, and t
 
 A UML diagram detailing the interfacing of these objects is pictured below.  Here, they are all separate classes that do not extend one another, so there are no arrows:
 
-![](images/facadeuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/facadeuml.png)
 
 ### Flyweight
 
@@ -1200,7 +1200,7 @@ The **Flyweight** pattern <span style="color:blue;">uses sharing to efficiently 
 
 This example also contains a factory for simplicity.  The UML for this example is exhibited below:
 
-![](images/flyuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/flyuml.png)
 
 ### Proxy
 
@@ -1235,7 +1235,7 @@ The **Proxy** design pattern <span style="color:blue;">provides a surrogate or p
 
 A UML diagram detailing the proxy relationship is below:
 
-![](images\proxyuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/proxyuml.png)
 
 ## Behavioral Patterns
 
@@ -1400,7 +1400,7 @@ In this example, we use a DvD class hierarchy to illustrate the strata necessary
 
 The hierarchical structure of these classes and their relationship is well illustrated in the following UML diagram:
 
-![](images/chainuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/chainuml.png)
 
 ### Command Pattern
 
@@ -1461,7 +1461,7 @@ In this example, `CommandAbstract.java` is the commander, and `DvdName.java` is 
 
 A UML diagram detailing this relationship is featured below:
 
-![](images/commanduml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/commanduml.png)
 
 ### Interpreter
 
@@ -1743,7 +1743,7 @@ Given a language, the **Interpreter** pattern <span style="color:blue;">defines 
 
 A UML diagram explaining the above diagram in further detail is pictured below:
 
-![](images/interpretuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/interpretuml.png)
 
 ### Iterator
 
@@ -1854,7 +1854,7 @@ However, this implementation assumes that the developer has a limited number of 
 
 A UML diagram showing the inner workings of the Iterator pattern is shown below:
 
-![](images\ituml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/ituml.png)
 
 ### Mediator
 
@@ -1969,7 +1969,7 @@ A **Mediator** is <span style="color:blue;">an object that encapsulates how a se
 
 Here is a UML diagram showing how the mediator was used above:
 
-![](images\meduml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/meduml.png)
 
 ### Memento
 
@@ -2336,7 +2336,7 @@ The interface for the actual program states, along with both possible states to 
 
 The UML diagram for this example follows:
 
-![](images\stateuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/stateuml.png)
 
 ### Strategy or Policy
 
@@ -2344,7 +2344,7 @@ The **Strategy** design pattern <span style="color:blue;">lets the algorithm var
 
 This pattern reduces coupling by allowing users to program according to an interface, rather than an implementation.  The strategy pattern is also useful when we have multiple algorithms for a specific task, and we want our application to be flexible in choosing any algorithms at runtime.  `Collections.sort` is an example: it takes the Comparator parameter and, based on the different implementations of `Comparator` interfaces, compared objects are sorted in different ways.  The strategy pattern is very similar to the state and command Patterns.
 
-![](images/strategy.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/strategy.png)
 
 A simple example of different strategies connected by an interface is shown below:
 
@@ -2425,7 +2425,7 @@ A simple example of different strategies connected by an interface is shown belo
 
 It is apparent that this is an example of polymorphism and modularity at work; developers often employ the strategy design pattern without even knowing it.  Check out the UML diagram below to see this in action:
 
-![](images/stratuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/stratuml.png)
 
 ### Template
 
@@ -2562,7 +2562,7 @@ A **Visitor** represents <span style="color:blue;">an operation to be performed 
 
 The below UML diagram illustrates the relationship between modules and their abstract visitor or visitee interfaces:
 
-![](images/visuml.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/visuml.png)
 
 ## Interning Pattern
 The interning pattern is not a Gang of Four design pattern.  With the interning pattern, existing objects with the same value are copied, instead of creating new, identical objects.  Unlike the singleton pattern, multiple instances of the same object exist, but objects with the same value are reused where needed.  Additionally, interned objects can be compared with == instead of equals because they are the same object.  Interning may improve program speed!

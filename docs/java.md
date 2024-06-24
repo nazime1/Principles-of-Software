@@ -125,15 +125,15 @@ Exceptions are helpful - they tell us what went wrong and prevent applications f
 
 In compilation, a high-level program is translated directly into executable machine code.  C++ uses compilation.
 
-![](images\comp.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/comp.png)
 
 In pure interpretation, a program is translated and executed one statement at a time using an interpreter.
 
-![](images\interpretation.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/interpretation.png)
 
 In hybrid interpretation, which Java uses, a program is compiled into intermediate code, and then intermediate code is interpreted.  Java uses both a compiler and an interpreter to run.
 
-![](images\hybrid.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/hybrid.png)
 
 Compilation begets faster execution, though it depends on many different factors.  Interpretation provides greater flexibility through dynamic (type) checks; other dynamic features are much more manageable.  Interpreters are also easier to write than compilers.
 

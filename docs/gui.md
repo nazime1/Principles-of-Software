@@ -260,7 +260,7 @@ Programs and their UI run in concurrent threads.  All UI actions happen in the U
 - `Painting` occurs when the window manager is ready
 - `paintComponent()` is called
 
-![](images\programwindow.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/programwindow.png)
 
 In the UI Thread, event handlers should only do a little work; if the event handler gets busy, the interface will appear to freeze up.  On the other hand, if there is a lot to do, the event handler should handle some events that the program thread will notice, and then do the heavy work behind the scenes.
 
@@ -272,4 +272,4 @@ The **Model View Controller (MVC)** design pattern, <span style="color:blue;">an
     - When `Sale` changes, it notifies its observers
     - The **Component**, is <span style="color:blue;">an observer class that extends JFrame</span>.  A component can also be initialized by implementing some Listener interface.
 
-![](images\cfd.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/cfd.png)

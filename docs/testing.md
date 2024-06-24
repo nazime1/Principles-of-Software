@@ -37,13 +37,13 @@ In addition to different scopes, there are a few different testing strategies, o
 
 **Black Box Testing** requires developers to <span style="color:blue;">ignore the code and test according to specifications</span>.  Ask, "given some input, is the produced output correct according to the spec?"  Black Box Tests are specification tests; equivalence partitioning, discussed below, is a black box testing strategy.
 
-![](images\bbt.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/bbt.png)
 
 Black Box Testing is advantageous because it is robust concerning changes in implementation.  Furthermore, it is independent of implementation, so test data does not need to be changed when the code is changed.  Black Box Testing also allows for independent testing, where developers unfamiliar with the code base can contribute.  Most importantly, black box tests can be written before their corresponding code; it is good practice to do so.
 
 **White Box Testing** is the practice of <span style="color:blue;">covering all possible internal logical paths of the program</span>.  Choose paths with knowledge of the implementation to cover as many use cases (or input conditions) as possible.  Unit testing, integration testing, and control-flow-based testing are white box testing strategies.
 
-![](images\wbt.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/wbt.png)
 
 White Box Testing is advantageous because the test suite can cover the entire program.  Thus, successful tests with high coverage imply few errors in the program.  The focus is not on features described in the program, but on control-flow details, performance optimizations, and alternate algorithms for different cases.
 
@@ -72,7 +72,7 @@ Another equivalence class could be integer values:
 
 Because these data dimensions are unrelated, we need to test a range of array sizes and values within the array.  We want to get arithmetic boundaries: the smallest, most significant, or zero values.
 
-![](images\eqpartition.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/eqpartition.png)
 
 ## Control-Flow-Based Testing
 
@@ -80,9 +80,9 @@ Because these data dimensions are unrelated, we need to test a range of array si
 
 In a CFG, each node represents a block of code.  In that, there is an entry block and an exit block.  Directed edges within the graph represent the control flow.
 
-![](images\if.png)
+![](ihttps://principles-of-software.github.io/Principles-of-Software/images/if.png)
 
-![](images\else.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/else.png)
 
 ## Coverage
 
@@ -96,13 +96,13 @@ The motivation for branch coverage is to test decision-making in the code.  Howe
 
 A **Def-Use Pair** consists of <span style="color:blue;">a definition and a variable where at least one path exists from the definition to the use</span>.  For example, `x = 1` could be a definition, and `y = x + 3` could be the use.  A DU Path could be from the definition of a variable to the use of the same variable, with no other definition of the variable on the path.  Loops can create infinite DU paths.
 
-![](images\du.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/du.png)
 
 For instance, in the above diagram, 1, 2, 3, 5, 6 is a definition-clear path from nodes 1 to 6, because `x` is not re-assigned between nodes 1 and 6.  On the other hand, 1, 2, 4, 5, 6 is *not* a definition-clear path from 1 to 6, because the value of `x` is reassigned at node 4.  Therefore, (1, 6) is a DU pair because 1, 2, 3, 5, 6 is a definition-clear path.
 
 We want to test all DU pairs, all DU paths, and all definitions.  Sometimes, there are impossible DU paths, so developers make up for the gaps in representation.  Detecting infeasibility can be difficult; in practice, the goal is to get reasonable testing coverage.  Aliasing, infeasible paths, and worst cases can hinder testing, but pragmatism is imperative here.
 
-![](images\infeasible.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/infeasible.png)
 
 For example, in the above diagram, suppose `cond` does not change between nodes 1 and 5.  Because the state doesn't change between 1 and 5, (3, 6) is *not* a feasible DU path.
 

@@ -42,7 +42,7 @@ A **Loop Invariant** is <span style="color:blue;">a condition that is true immed
 
 In **Forward Reasoning in a Loop**, <span style="color:blue;">a loop invariant must be true before entering the loop, after each iteration, and after the loop exits</span>.  It must also be relevant.  A good loop invariant should involve the changing loop variable and the postcondition.  *The decrementing function and the loop invariant must imply the postcondition*
 
-![](images\freasoning_loop.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/freasoning_loop.pngimages\freasoning_loop.png)
 
 ## Induction
 

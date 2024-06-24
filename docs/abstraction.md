@@ -13,7 +13,7 @@ ADTs can be immutable or mutable.  **Immutable Objects** <span style="color:blue
 In Java, ADT operations are usually **public**, or <span style="color:blue;">accessible to users</span>, and other operations are **private**, or <span style="color:blue;">inaccessible to users</span>.  We will talk more about this in the context of access control modifiers in the Java section of this text.  
 Clients can only access ADT *operations*; because ADTs rarely have producers and are most often immutable, new ADTs must be created to change older ones.  This way, an ADT can act as a specification or set of operations.
 
-![](images\jadt.png)
+![](https://principles-of-software.github.io/Principles-of-Software/images/jadt.png)
 
 ## Domain
 

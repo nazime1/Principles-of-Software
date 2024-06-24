@@ -1,0 +1,29 @@
+.navbar {
+    position: absolute;
+    display: grid;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: #3c0571;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .button-selected {
+    background-color: #646cff;
+    border-color: white;
+    border-width: 5px;
+  }
+
+  .button {
+    height: 50px;
+  }
+  
+  .logo {
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    object-fit: contain;
+  }

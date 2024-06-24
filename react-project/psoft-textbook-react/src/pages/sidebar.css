@@ -1,0 +1,29 @@
+dl {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  width: 400px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  text-align: left;
+  line-height: 40px;
+}
+
+dt a {
+	color: rgba(255, 255, 255, 0.87);
+}
+
+dt a:hover {
+	color: rgba(255, 255, 255, 1.5);
+}
+
+@media (prefers-color-scheme: light) {
+  dt a {
+    color: rgb(0, 0, 0);
+  }
+
+  dt a:hover {
+    color:rgb(56, 56, 53);
+  }
+}
