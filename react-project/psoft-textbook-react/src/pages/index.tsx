@@ -69,6 +69,7 @@ export default function Index() {
     request.open("POST", targetURL);
     request.setRequestHeader("Access-Control-Allow-Origin", targetURL);
     request.send(JSON.stringify(obj));
+  };
 
 
   const handleRun = () => {
@@ -131,5 +132,4 @@ export default function Index() {
       </div>
     </div>
   );
-}
 }
