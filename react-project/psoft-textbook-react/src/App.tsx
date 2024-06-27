@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { createBrowserRouter, RouterProvider, LoaderFunction, ActionFunction } from "react-router-dom";
+import { createHashRouter, RouterProvider, LoaderFunction, ActionFunction } from "react-router-dom";
 
 interface RouteCommon {
   loader ?: LoaderFunction;
@@ -52,13 +52,12 @@ for (const path of Object.keys(pages)) {
   });
 }
 
-const router = createBrowserRouter(
-  routes.map(({ Element, ErrorBoundary, ...rest }) => ({
-    ...rest,
-    element: <Element />,
-    ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
-  }))
-);
+const router = createHashRouter([
+  {
+    path: "/*",
+    element: <App />,
+  }
+]);
 
 const App = () => {
   return <RouterProvider router={router} />;
