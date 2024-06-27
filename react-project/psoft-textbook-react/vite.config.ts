@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.md'],
-  base: 'https://nazime1.github.io/Principles-of-Software/'
+  base: '.'
 })
