@@ -10,7 +10,7 @@ export default function Landing() {
                 className="landinglogo"
                 style={{display: "inline"}}
                 onClick={() => {
-                    window.location.href = "Principles-of-Software/#/index";
+                    window.location.href = "/#/index";
                 }}
                 />
             <img
@@ -18,7 +18,7 @@ export default function Landing() {
             className="textbooklogo"
             style={{display: "inline"}}
             onClick={() => {
-                window.location.href = "Principles-of-Software/#/textbook";
+                window.location.href = "/#/textbook";
             }}
             />
             </div>
