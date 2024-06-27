@@ -28,7 +28,10 @@ export default function Index() {
         }
       ]
     }
-    post("https://clownfish-app-mfank.ondigitalocean.app/compile", JSON.stringify(obj))
+    const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
+    const proxyURL = "https://cors-anywhere.herokuapp.com/";
+
+    post(proxyURL + targetURL, JSON.stringify(obj))
       .then((response) => {
         setLoading(false);
         setData(response);
