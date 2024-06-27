@@ -38,8 +38,10 @@ jobs:
           cache-dependency-path: react-project/psoft-textbook-react/package-lock.json
       - name: Install dependencies
         run: npm install
+        working-directory: react-project/psoft-textbook-react
       - name: Build
         run: npm run build
+        working-directory: react-project/psoft-textbook-react
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
