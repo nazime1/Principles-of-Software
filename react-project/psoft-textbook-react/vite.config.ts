@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.md'],
-  base: '.'
+  base: './react-project/psoft-textbook-react'
 })
