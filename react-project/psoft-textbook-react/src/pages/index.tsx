@@ -28,7 +28,7 @@ export default function Index() {
         }
       ]
     }
-    post("http://localhost/compile", JSON.stringify(obj))
+    post("https://clownfish-app-mfank.ondigitalocean.app/compile", JSON.stringify(obj))
       .then((response) => {
         setLoading(false);
         setData(response);
