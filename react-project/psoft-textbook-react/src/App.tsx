@@ -38,7 +38,7 @@ for (const path of Object.keys(pages)) {
     continue;
   }
   for (const path of Object.keys(textbook)) {
-    const fileName = patch.match(/\./\pages\/textbook\/(.*)\.tsx/)?.[1];
+    const fileName = patch.match(/\.\/pages\/textbook\/(.*)\.tsx/)?.[1];
     if (!fileName) {
       continue;
     }
