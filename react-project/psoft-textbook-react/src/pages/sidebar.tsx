@@ -5,23 +5,23 @@ export default function Sidebar() {
   return (
   <>
   <dl>
-  <dt><h2><a href="#/textbook">Principles of Software Textbook</a></h2></dt>
-  <dt><a href="#/textbook/readme">Forward</a></dt>
-  <dt><a href="#/textbook/introduction">Introduction</a></dt>
-  <dt><a href="#/textbook/specifications">Specifications</a></dt>
-  <dt><a href="#/textbook/reasoning">Reasoning</a></dt>
-  <dt><a href="#/textbook/abstraction">Abstraction</a></dt>
-  <dt><a href="#/textbook/java">Java</a></dt>
-  <dt><a href="#/textbook/dafny">Dafny</a></dt>
-  <dt><a href="#/textbook/testing">Testing</a></dt>
-  <dt><a href="#/textbook/equality">Identity & Equality</a></dt>
-  <dt><a href="#/textbook/polymorphism">Parametric Polymorphism: Generics</a></dt>
-  <dt><a href="#/textbook/patterns">Design Patterns</a></dt>
-  <dt><a href="#/textbook/refactoring">Refactoring</a></dt>
-  <dt><a href="#/textbook/usability">Usability</a></dt>
-  <dt><a href="#/textbook/gui">Graphical User Interface (GUI) Programming</a></dt>
-  <dt><a href="#/textbook/processes">Software Processes</a></dt>
-  <dt><a href="#/textbook/appendix">Appendix</a></dt>
+  <dt><h2><a href="Principles-of-Software/#/textbook">Principles of Software Textbook</a></h2></dt>
+  <dt><a href="Principles-of-Software/#/textbook/readme">Forward</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/introduction">Introduction</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/specifications">Specifications</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/reasoning">Reasoning</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/abstraction">Abstraction</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/java">Java</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/dafny">Dafny</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/testing">Testing</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/equality">Identity & Equality</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/polymorphism">Parametric Polymorphism: Generics</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/patterns">Design Patterns</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/refactoring">Refactoring</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/usability">Usability</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/gui">Graphical User Interface (GUI) Programming</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/processes">Software Processes</a></dt>
+  <dt><a href="Principles-of-Software/#/textbook/appendix">Appendix</a></dt>
   </dl>
   </>
   )
