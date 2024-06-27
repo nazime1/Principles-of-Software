@@ -30,6 +30,7 @@ interface Textbook {
 const pages: Pages = import.meta.glob("./pages/**/*.tsx", { eager: true });
 
 const textbook : Textbook = import.meta.glob("./pages/textbook/**/*.tsx", { eager: true});
+console.log(textbook);
 
 const routes: Routes[] = [];
 for (const path of Object.keys(pages)) {
@@ -37,12 +38,7 @@ for (const path of Object.keys(pages)) {
   if (!fileName) {
     continue;
   }
-  for (const path of Object.keys(textbook)) {
-    const fileName = patch.match(/\.\/pages\/textbook\/(.*)\.tsx/)?.[1];
-    if (!fileName) {
-      continue;
-    }
-  }
+}
 
   const normalizedPathName = fileName.includes("$")
     ? fileName.replace("$", ":")
