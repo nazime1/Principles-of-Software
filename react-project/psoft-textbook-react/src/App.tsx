@@ -52,12 +52,13 @@ for (const path of Object.keys(pages)) {
   });
 }
 
-const router = createHashRouter([
-  {
-    path: "/*",
-    element: <App />,
-  }
-]);
+const router = createHashRouter(
+  routes.map(({ Element, ErrorBoundary, ...rest }) => ({
+    ...rest,
+    element: <Element />,
+    ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
+  }))
+);
 
 const App = () => {
   return <RouterProvider router={router} />;
