@@ -29,21 +29,19 @@ export default function Index() {
       ]
     }
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
-    const proxyURL = "https://cors-anywhere.herokuapp.com/";
-
-    post(proxyURL + targetURL, JSON.stringify(obj))
-      .then((response) => {
-        setLoading(false);
-        setData(response);
-        const errorText = response.slice(
-          response.length - 9,
-          response.length - 1
+    var request = new XMLHttpRequest();
+    request.onreadystatechange= function () {
+      if (request.readyState==4) {
+          setLoading(false);
+          setData(response);
+          const errorText = response.slice(
+            response.length - 9,
+            response.length - 1
         );
         const expectedNonErrorText = "0 errors";
         let errorExists = true;
 
         if (errorText === expectedNonErrorText) {
-          console.log("no error");
           errorExists = false;
         }
 
@@ -53,7 +51,6 @@ export default function Index() {
 
           let match;
           while ((match = regex.exec(response)) !== null) {
-            console.log("yes");
             const fileName: string = match[1];
             const line: number = parseInt(match[2]);
             const column: number = parseInt(match[3]);
@@ -68,10 +65,11 @@ export default function Index() {
           }
         }
       })
-      .catch((error) => {
-        console.error("error: ", error);
-      });
-  };
+    };
+    request.open("POST", targetURL);
+    request.setHeader("Access-Control-Allow-Origin": targetURL);
+    request.send(JSON.stringify(obj));
+
 
   const handleRun = () => {
     setLoading(true);
