@@ -10,7 +10,7 @@ export default function Landing() {
                 className="landinglogo"
                 style={{display: "inline"}}
                 onClick={() => {
-                    window.location.href = "https://nazime1.github.io/Principles-of-Software/#/index;
+                    window.location.href = "https://nazime1.github.io/Principles-of-Software/#/index";
                 }}
                 />
             <img
