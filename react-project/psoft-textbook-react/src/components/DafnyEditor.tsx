@@ -41,18 +41,19 @@ export default function DafnyEditor({
     };
   }, [monaco]);
 
-   const editorRef = useRef(null);
+   const initialRef : any = null;
+   const editorRef = useRef(initialRef);
 
-  function handleEditorDidMount(editor, monaco) {
+  function handleEditorDidMount(editor) {
     editorRef.current = editor;
   }
 
   function showValue() {
-    globalThis.dafnyCode = editorRef.current?.getValue();
+    globalThis.dafnyCode = editorRef.current!.getValue();
   }
 
   function clearValue() {
-    editorRef.current?.setValue("");
+    editorRef.current!.setValue("");
   }
 
    return (<div><button onClick={clearValue}>Clear</button>
