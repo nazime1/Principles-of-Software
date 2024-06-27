@@ -38,7 +38,6 @@ for (const path of Object.keys(pages)) {
   if (!fileName) {
     continue;
   }
-}
 
   const normalizedPathName = fileName.includes("$")
     ? fileName.replace("$", ":")
