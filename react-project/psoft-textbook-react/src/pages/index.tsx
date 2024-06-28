@@ -68,6 +68,8 @@ export default function Index() {
     };
     request.open("POST", targetURL);
     request.setRequestHeader("Access-Control-Allow-Origin", targetURL);
+    request.setRequestHeader("Access-Control-Allow-Methods", POST);
+    request.setRequestHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
     request.send(JSON.stringify(obj));
   };
 
