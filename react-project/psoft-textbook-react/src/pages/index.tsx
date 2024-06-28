@@ -29,7 +29,6 @@ export default function Index() {
       ]
     }
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
-    const proxyURL = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://clownfish-app-mfank.ondigitalocean.app/compile");
     var request = new XMLHttpRequest();
     request.onreadystatechange= function () {
       if (request.readyState==4) {
@@ -67,9 +66,11 @@ export default function Index() {
         }
       }
     };
-    request.open("POST", proxyURL);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify(obj));
+    request.open("POST", targetURL);
+    const blob = new Blob([JSON.stringify(obj)], {
+      type: "application/json",
+    });
+    request.send(blob);
   };
 
 
