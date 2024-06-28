@@ -70,6 +70,7 @@ export default function Index() {
     request.setRequestHeader("Access-Control-Allow-Origin", targetURL);
     request.setRequestHeader("Access-Control-Allow-Methods", "post");
     request.setRequestHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    request.setRequestHeader("Access-Control-Max-Age", 600);
     request.send(JSON.stringify(obj));
   };
 
