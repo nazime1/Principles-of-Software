@@ -29,6 +29,7 @@ export default function Index() {
       ]
     }
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
+    const proxyURL = "https://corsproxy.io/?" + encodeURIComponent("https://clownfish-app-mfank.ondigitalocean.app/compile");
     var request = new XMLHttpRequest();
     request.onreadystatechange= function () {
       if (request.readyState==4) {
@@ -66,8 +67,8 @@ export default function Index() {
         }
       }
     };
-    request.open("POST", targetURL);
-    request.setRequestHeader("Access-Control-Allow-Origin", targetURL);
+    request.open("POST", proxyURL);
+    request.setRequestHeader("Access-Control-Allow-Origin", proxyURL);
     request.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("Accept", "application/json");
