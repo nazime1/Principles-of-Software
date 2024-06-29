@@ -38,8 +38,9 @@ export default function Index() {
       method: "POST",
   })
   setLoading(false);
-  setData(await response.text());
-  console.log(response.text());
+  var resp = await response.text();
+  setData(resp);
+  console.log(resp);
   }
   get()
   };
