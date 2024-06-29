@@ -31,10 +31,9 @@ export default function Index() {
     const blob = new Blob([JSON.stringify(obj)], {
       type: "application/json",
     });
-    const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
-    const proxyURL = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://clownfish-app-mfank.ondigitalocean.app/compile");
+    const targetURL = "https://test.cors.workers.dev/?https://clownfish-app-mfank.ondigitalocean.app/compile";
     let get = async () => {
-    let response = await fetch(proxyURL, {
+    let response = await fetch(targetURL, {
       body: blob,
       method: "POST",
   })
