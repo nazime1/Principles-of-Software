@@ -39,10 +39,10 @@ export default function Index() {
       method: "POST",
   })
   setLoading(false);
-  setData(response);
-  const errorText = response.slice(
-    response.length - 9,
-    response.length - 1
+  setData(response.text());
+  const errorText = response.text().slice(
+    response.text().length - 9,
+    response.text().length - 1
   );
   const expectedNonErrorText = "0 errors";
   let errorExists = true;
@@ -53,7 +53,7 @@ export default function Index() {
     const errorObjects: ErrorObject[] = [];
     const regex: RegExp = /(.*?)\((\d+),(\d+)\): Error: (.*)/g;
     let match;
-    while ((match = regex.exec(response)) !== null) {
+    while ((match = regex.exec(response.text())) !== null) {
       const fileName: string = match[1];
       const line: number = parseInt(match[2]);
       const column: number = parseInt(match[3]);
