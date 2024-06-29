@@ -36,12 +36,12 @@ export default function Index() {
     xhr.open('POST', targetURL);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function() {//Call a function when the state changes.
-    if(http.readyState == 4 && http.status == 200) {
+    if(xhr.readyState == 4 && xhr.status == 200) {
         setLoading(false);
         setData(xhr.responseText);
       }
     }
-    http.send(blob);
+    xhr.send(blob);
   };
 
 
