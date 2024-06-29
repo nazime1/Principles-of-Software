@@ -63,12 +63,11 @@ export default function Index() {
               line,
               column,
               errorMessage,
-            });
-          }
+          });
         }
       }
-    };
-  }
+    }
+  };
   get()
 
 
