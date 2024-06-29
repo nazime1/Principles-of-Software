@@ -28,9 +28,6 @@ export default function Index() {
           }
         ]
       }
-    const blob = new Blob([JSON.stringify(obj)], {
-      type: "application/json",
-    });
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
     var xhr = new XMLHttpRequest();
     xhr.open('POST', targetURL);
@@ -41,7 +38,7 @@ export default function Index() {
         setData(xhr.responseText);
       }
     }
-    xhr.send(blob);
+    xhr.send(JSON.stringify(obj));
   };
 
 
