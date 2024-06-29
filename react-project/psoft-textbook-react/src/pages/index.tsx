@@ -19,45 +19,46 @@ export default function Index() {
 
   const handleVerify = () => {
     setLoading(true);
-       var obj = {
-      requester: "postman",
-      files: [
-        {
-        name: "problem.dfy",
-        content: globalThis.dafnyCode
-        }
-      ]
-    }
+      var obj = {
+        requester: "postman",
+        files: [
+          {
+            name: "problem.dfy",
+            content: globalThis.dafnyCode
+          }
+        ]
+      }
+    const blob = new Blob([JSON.stringify(obj)], {
+      type: "application/json",
+    });
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
     const proxyURL = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://clownfish-app-mfank.ondigitalocean.app/compile");
-    var request = new XMLHttpRequest();
-    request.onreadystatechange= function () {
-      if (request.readyState==4) {
-          setLoading(false);
-          setData(request.response);
-          const errorText = request.response.slice(
-            request.response.length - 9,
-            request.response.length - 1
-        );
-        const expectedNonErrorText = "0 errors";
-        let errorExists = true;
-
-        if (errorText === expectedNonErrorText) {
+    let get = async () => {
+    let response = await fetch(proxyURL, {
+      body: blob,
+      method: "POST",
+  })
+  setLoading(false);
+  setData(request.response);
+  const errorText = request.response.slice(
+    request.response.length - 9,
+    request.response.length - 1
+  );
+  const expectedNonErrorText = "0 errors";
+  let errorExists = true;
+  if (errorText === expectedNonErrorText) {
           errorExists = false;
-        }
-
-        if (errorExists) {
-          const errorObjects: ErrorObject[] = [];
-          const regex: RegExp = /(.*?)\((\d+),(\d+)\): Error: (.*)/g;
-
-          let match;
-          while ((match = regex.exec(request.response)) !== null) {
-            const fileName: string = match[1];
-            const line: number = parseInt(match[2]);
-            const column: number = parseInt(match[3]);
-            const errorMessage: string = match[4];
-
-            errorObjects.push({
+  }
+  if (errorExists) {
+    const errorObjects: ErrorObject[] = [];
+    const regex: RegExp = /(.*?)\((\d+),(\d+)\): Error: (.*)/g;
+    let match;
+    while ((match = regex.exec(request.response)) !== null) {
+      const fileName: string = match[1];
+      const line: number = parseInt(match[2]);
+      const column: number = parseInt(match[3]);
+      const errorMessage: string = match[4];
+      errorObjects.push({
               fileName,
               line,
               column,
@@ -67,12 +68,8 @@ export default function Index() {
         }
       }
     };
-    request.open("POST", proxyURL);
-    const blob = new Blob([JSON.stringify(obj)], {
-      type: "application/json",
-    });
-    request.send(blob);
-  };
+  }
+  get()
 
 
   const handleRun = () => {
