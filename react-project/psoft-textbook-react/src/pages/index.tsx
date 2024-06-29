@@ -32,17 +32,16 @@ export default function Index() {
       type: "application/json",
     });
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
-    let get = async () => {
-    let response = await fetch(targetURL, {
-      body: blob,
-      method: "POST",
-  })
-  setLoading(false);
-  var resp = await response.text();
-  setData(resp);
-  console.log(resp);
-  }
-  get()
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', targetURL);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+        setLoading(false);
+        setData(xhr.responseText);
+      }
+    }
+    http.send(blob);
   };
 
 
