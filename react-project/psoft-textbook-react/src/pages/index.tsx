@@ -34,7 +34,7 @@ export default function Index() {
     const targetURL = "https://clownfish-app-mfank.ondigitalocean.app/compile";
     const proxyURL = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://clownfish-app-mfank.ondigitalocean.app/compile");
     let get = async () => {
-    let response = await fetch(proxyURL, {
+    let response = await fetch("http://localhost/compile", {
       body: blob,
       method: "POST",
   })
