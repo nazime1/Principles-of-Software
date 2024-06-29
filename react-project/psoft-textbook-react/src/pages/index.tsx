@@ -40,8 +40,8 @@ export default function Index() {
   })
   setLoading(false);
   setData(await response.text());
-  get()
   }
+  get()
   };
 
 
