@@ -39,6 +39,7 @@ export default function Index() {
   })
   setLoading(false);
   setData(await response.text());
+  console.log(response.text());
   }
   get()
   };
