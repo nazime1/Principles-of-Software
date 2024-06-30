@@ -28,7 +28,7 @@ export default function Index() {
           }
         ]
       }
-    const targetURL = "https://cloudrunservice-xl7gt6abwa-wl.a.run.app/compile;
+    const targetURL = "https://cloudrunservice-xl7gt6abwa-wl.a.run.app/compile";
     var xhr = new XMLHttpRequest();
     xhr.open('POST', targetURL);
     xhr.setRequestHeader("Content-Type", "application/json");
