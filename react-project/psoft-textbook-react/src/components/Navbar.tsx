@@ -28,6 +28,9 @@ export default function Navbar() {
           <Link to="/HoareTriple">
             <button>Hoare Triples</button>
           </Link>
+          <Link to="/CFGCanvas">
+          <button>CFG Canvas</button>
+          </Link>
         </div>
         <div>
           <Link to="https://faculty.rpi.edu/konstantin-kuzmin">
