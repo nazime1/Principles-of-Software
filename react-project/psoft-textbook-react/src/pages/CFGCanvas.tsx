@@ -8,5 +8,6 @@ export default function CFGCanvas() {
 		</div>
 		<div className="screen">
 		</div>
+	</div>
 	);
 }
