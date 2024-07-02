@@ -1,0 +1,55 @@
+.CFGsidebar {
+  position: relative;
+  margin: 60px;
+  width: 500px;
+  height: 60%;
+  background-color: #333332;
+  border-radius: 25px;
+}
+
+.clicker {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.oval {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.rectangle {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.diamond {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.text {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.true {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.false {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+}
