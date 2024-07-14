@@ -1,22 +1,20 @@
 import Navbar from "../components/Navbar";
-import CFGSidebar from "../components/CFGSidebar";
+import { Toolbar } from 'primereact/toolbar';
+import "../components/CFGSidebar.css"
 import "./CFGCanvas.css";
-import React from 'react';
-import { Stage, Layer, Text } from 'react-konva';
-import { Html } from 'react-konva-utils';
+import React, { MouseEvent, useState, useEffect, useRef } from 'react';
+import { ReactFlow, ReactFlowProvider, getViewportForBounds, useReactFlow } from '@xyflow/react';
+import '@xyflow/react/dist/style.css';
+import AddNodeOnEdgeDrop from "../components/AddNodeOnEdgeDrop";
 
 export default function CFGCanvas() {
+
 	return (
-		<html>
-		<Stage id={"stage1"} width={window.innerWidth} height={window.innerHeight} draggable={true}>
-		<Layer>
-		<Html>
-		<CFGSidebar/>
-		</Html>
-		<Text fill={"black"} fontSize={100} text="Under construction!"/>
-		</Layer>
-		</Stage>
+	<div>
 		<Navbar/>
-		</html>
+		<ReactFlowProvider>
+    		<AddNodeOnEdgeDrop/>
+  		</ReactFlowProvider>
+  	</div>
 	);
 }

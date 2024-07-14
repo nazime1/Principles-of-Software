@@ -1,55 +1,63 @@
 .CFGsidebar {
   position: relative;
   margin: 60px;
-  width: 500px;
-  height: 60%;
+  width: 320px;
+  max-height: 40%;
   background-color: #333332;
   border-radius: 25px;
+  object-fit: contain;
 }
 
-.clicker {
+#clicker {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  background-color: #4f4f4d;
+}
+
+#oval {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#rectangle {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
 
-.oval {
+#diamond {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
 
-.rectangle {
+#text {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
 
-.diamond {
+#true {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
 
-.text {
+#false {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
 
-.true {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
-}
-
-.false {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
-}
-
-.arrow {
+#arrow {
   width: 40px;
   height: 40px;
 }

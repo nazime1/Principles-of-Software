@@ -1,0 +1,80 @@
+.react-flow .react-flow__handle {
+  width: 30px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: #784be8;
+}
+
+.react-flow .react-flow__handle-top {
+  top: -10px;
+}
+
+.react-flow .react-flow__handle-bottom {
+  bottom: -10px;
+}
+
+.react-flow .react-flow__node {
+  height: 40px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-width: 3.5px;
+  font-weight: 700;
+  color: black;
+  border-color: black;
+}
+
+.react-flow .react-flow__node-input {
+  border-radius: 75px;
+  width: 100px;
+}
+
+.react-flow .react-flow__node-output {
+  border-radius: 75px;
+}
+
+.react-flow .react-flow__node-shape {
+  height: 40px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-width: 3.5px;
+  font-weight: 700;
+  color: black;
+  border-color: black;
+}
+
+.react-flow .react-flow__edge path,
+.react-flow__connectionline path {
+  stroke-width: 2;
+}
+
+.wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.nodeInput {
+  margin-left: 1000px;
+  display: none;
+}
+
+.node-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: var(--text);
+}
+
+.node-label::placeholder {
+  color: var(--text);
+  opacity: 0.5;
+}

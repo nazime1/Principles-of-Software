@@ -9,6 +9,7 @@
     "noImplicitAny": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",

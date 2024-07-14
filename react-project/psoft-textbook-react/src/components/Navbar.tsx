@@ -25,9 +25,6 @@ export default function Navbar() {
           <Link to="/index">
             <button>Dafny Verifier</button>
           </Link>
-          <Link to="/HoareTriple">
-            <button>Hoare Triples</button>
-          </Link>
           <Link to="/CFGCanvas">
           <button>CFG Canvas</button>
           </Link>
