@@ -38,6 +38,7 @@ function ShapeNode({ id, selected, data }: NodeProps<ShapeNodeData>) {
   const { color, type } = data;
   const { setNodes } = useReactFlow();
   const handleStyle = { backgroundColor: "#784be8" };
+  const rightHandleStyle = { backgroundColor: "#784be8", marginRight: "130px" }
 
   return (
     <div className="shapeNode">

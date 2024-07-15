@@ -7,6 +7,7 @@ import "./CFGSidebar.css";
 import type * as CSS from 'csstype';
 import ShapeNode from './ShapeNode';
 import { toPng } from 'html-to-image';
+import useUndoRedo from './useUndoRedo';
 
 export default function AddNodeOnEdgeDrop() {
 
@@ -31,7 +32,11 @@ export default function AddNodeOnEdgeDrop() {
   const [nodeType, setNodeType] = useState('');
   const [branchType, setBranchType] = useState('');
   const { screenToFlowPosition } = useReactFlow();
+  const reactFlowInstance = useReactFlow();
+  const { undo, redo, canUndo, canRedo, takeSnapshot } = useUndoRedo();
+
   const onConnect = useCallback((params) => {
+     takeSnapshot();
 	   connectingNodeId.current = null;
 	   setEdges((eds) => addEdge(params, eds));
   }, []);
@@ -67,13 +72,15 @@ export default function AddNodeOnEdgeDrop() {
       e.currentTarget.style.backgroundColor = '#4f4f4d';
   };
 
-	const onConnectStart = useCallback((_, { nodeId }) => {
-    	connectingNodeId.current = nodeId;
+	const onConnectStart = useCallback((event, { nodeId, handleId }) => {
+    takeSnapshot();
+    connectingNodeId.current = nodeId;
   	}, []);
 
   	const onConnectEnd = useCallback(
     (event) => {
       if (!connectingNodeId.current) return;
+      takeSnapshot();
 
       const conNodeId = (connectingNodeId.current) as string;
 
@@ -217,6 +224,8 @@ export default function AddNodeOnEdgeDrop() {
     <div className="wrapper" ref={reactFlowWrapper} style={divStyle}>
     <Toolbar start={startContent} className="CFGsidebar"/>
     <button className="download-btn" onClick={onClick} style={btnStyle}>Download Image</button>
+    <button className="undo-btn" onClick={undo}>Undo</button>
+    <button className="redo-btn" onClick={redo}>Redo</button>
       	<ReactFlow
         		nodes={nodes}
         		edges={edges}
