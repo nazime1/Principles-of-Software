@@ -4,7 +4,7 @@ import "../components/CFGSidebar.css"
 import React, { MouseEvent, useState, useEffect, useRef } from 'react';
 import { ReactFlow, ReactFlowProvider, getViewportForBounds, useReactFlow } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import AddNodeOnEdgeDrop from "../components/AddNodeOnEdgeDrop";
+import DragDrop from "../components/DragDrop";
 
 export default function CFGCanvas() {
 
@@ -12,7 +12,7 @@ export default function CFGCanvas() {
 	<div>
 		<Navbar/>
 		<ReactFlowProvider>
-    		<AddNodeOnEdgeDrop/>
+    		<DragDrop/>
   		</ReactFlowProvider>
   	</div>
 	);

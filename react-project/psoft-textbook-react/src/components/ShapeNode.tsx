@@ -37,8 +37,7 @@ export type ShapeNodeData = {
 function ShapeNode({ id, selected, data }: NodeProps<ShapeNodeData>) {
   const { color, type } = data;
   const { setNodes } = useReactFlow();
-  const handleStyle = { backgroundColor: "#784be8" };
-  const rightHandleStyle = { backgroundColor: "#784be8", marginRight: "130px" }
+  const handleStyle = { backgroundColor: "#00000", };
 
   return (
     <div className="shapeNode">
@@ -53,7 +52,7 @@ function ShapeNode({ id, selected, data }: NodeProps<ShapeNodeData>) {
       <Handle
         style={handleStyle}
         id='top'
-        type='target'
+        type='source'
         position={Position.Top}
         isConnectable={true}
       />
@@ -62,6 +61,20 @@ function ShapeNode({ id, selected, data }: NodeProps<ShapeNodeData>) {
         id='bottom'
         type='source'
         position={Position.Bottom}
+        isConnectable={true}
+      />
+      <Handle
+        style={handleStyle}
+        id='right'
+        type='source'
+        position={Position.Right}
+        isConnectable={true}
+      />
+      <Handle
+        style={handleStyle}
+        id='left'
+        type='source'
+        position={Position.Left}
         isConnectable={true}
       />
       <NodeLabel placeholder={"Node"}/>

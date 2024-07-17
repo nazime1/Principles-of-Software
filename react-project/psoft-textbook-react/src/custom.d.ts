@@ -5,6 +5,7 @@ declare module "*.svg" {
 
 declare global {
   var dafnyCode: string;
+  var branchVal: string;
 }
 
 declare module "*.md";
