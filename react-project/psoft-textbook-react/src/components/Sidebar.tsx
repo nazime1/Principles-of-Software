@@ -35,6 +35,7 @@ export default () => {
       <div className="dndnode false" onClick={() => onClick('falseBranch')}>
       False Branch
       </div>
+      <p>You can draw edges by clicking and dragging on the <b>black dots</b> between two nodes.</p>
     </aside>
   );
 };
