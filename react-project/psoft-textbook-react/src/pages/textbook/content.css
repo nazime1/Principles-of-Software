@@ -1,9 +1,11 @@
 .textbook-content {
-  margin: 0 auto;
-  max-width: 50%;
+  margin-left: 300px;
+  max-width: 100%;
   padding: 30px 15px 40px;
   position: relative;
   text-align: left;
+  background-color: #242424;
+  color: silver;
 }
 
 @media (prefers-color-scheme: dark) {

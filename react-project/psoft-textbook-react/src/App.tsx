@@ -1,6 +1,3 @@
-//import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import { createHashRouter, RouterProvider, LoaderFunction, ActionFunction } from "react-router-dom";
 
@@ -30,7 +27,6 @@ interface Textbook {
 const pages: Pages = import.meta.glob("./pages/**/*.tsx", { eager: true });
 
 const textbook : Textbook = import.meta.glob("./pages/textbook/**/*.tsx", { eager: true});
-console.log(textbook);
 
 const routes: Routes[] = [];
 for (const path of Object.keys(pages)) {
@@ -50,6 +46,25 @@ for (const path of Object.keys(pages)) {
     action: pages[path]?.action,
     ErrorBoundary: pages[path]?.ErrorBoundary,
   });
+}
+
+for (const path of Object.keys(textbook)) {
+    const fileName = path.match(/\.\/pages\/(.*)\.tsx/)?.[1];
+    if (!fileName) {
+      continue;
+    }
+
+    const normalizedPathName = fileName.includes("$")
+     ? fileName.replace("$", ":")
+     : fileName.replace(/\/index/, "");
+
+    routes.push({
+      path: fileName === "landing" ? "/" : `/textbook/${normalizedPathName.toLowerCase()}`,
+      Element: pages[path].default,
+      loader: pages[path]?.loader,
+      action: pages[path]?.action,
+      ErrorBoundary: pages[path]?.ErrorBoundary,
+    });  
 }
 
 const router = createHashRouter(

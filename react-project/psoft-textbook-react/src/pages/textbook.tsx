@@ -1,5 +1,5 @@
 import "./textbook.css";
-import Sidebar from "./sidebar.tsx";
+import Sidebar from "./sidebar";
 
 export default function Textbook() {
 	return (
@@ -16,7 +16,7 @@ export default function Textbook() {
 		<br/>
 		<a href="https://github.com/nazime1/Principles-of-Software">
 			<button>GitHub</button></a>
-		<a href="/textbook/readme">
+		<a href="/#/textbook/readme">
 		<button>Get Started</button></a>
 		</div>
 	</>
