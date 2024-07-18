@@ -32,7 +32,7 @@ export default function Index() {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', targetURL);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function() {//Call a function when the state changes.
+    xhr.onreadystatechange = function() {
     if(xhr.readyState == 4 && xhr.status == 200) {
         setLoading(false);
         setData(xhr.responseText);
@@ -42,22 +42,29 @@ export default function Index() {
   };
 
 
-  const handleRun = () => {
+  /*const handleRun = () => {
     setLoading(true);
-    post("http://localhost:3000/run", code)
-      .then((response) => {
+     var obj = {
+        requester: "postman",
+        files: [
+          {
+            name: "problem.dfy",
+            content: globalThis.dafnyCode
+          }
+        ]
+      }
+    const targetURL = "https://cloudrunservice-xl7gt6abwa-wl.a.run.app/run";
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', targetURL);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4 && xhr.status == 200) {
         setLoading(false);
-        setData(response);
-      })
-      .catch((error) => {
-        console.error("error: ", error);
-      });
-  };
-
-  const handleClickClear = () => {
-    setData("");
-    //setCode("// input code");
-  };
+        setData(xhr.responseText);
+      }
+    }
+    xhr.send(JSON.stringify(obj));
+  };*/
 
   const handleEditorChange = (value: string | undefined) => {
     if (value) {
@@ -96,7 +103,6 @@ export default function Index() {
           </div>
           <div className="flex flex-row justify-evenly max-h-11 mb-4">
             <button onClick={handleVerify}>Verify Dafny</button>
-            <button onClick={handleRun}>Run Dafny</button>
           </div>
         </div>
       </div>
