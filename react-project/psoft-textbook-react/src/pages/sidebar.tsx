@@ -1,80 +1,28 @@
 import React from "react";
-import {
-  CDBSidebar,
-  CDBSidebarContent,
-  CDBSidebarFooter,
-  CDBSidebarHeader,
-  CDBSidebarMenu,
-  CDBSidebarMenuItem
-} from "cdbreact";
-import { NavLink } from "react-router-dom";
+import './sidebar.css';
 
 export default function Sidebar() {
   return (
-    <div
-      style={{ display: "flex", height: "100vh", position: "fixed", overflow: "scroll initial" }}
-    >
-      <CDBSidebar className="CDBsidebar" breakpoint={720} minWidth={'100px'} maxWidth={'300px'} toggled={false} textColor="#fff" backgroundColor="#333">
-        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-          <a
-            href="/#/textbook"
-            className="text-decoration-none"
-            style={{ color: "inherit" }}
-          >PSoft
-          Textbook
-          </a>
-        </CDBSidebarHeader>
-
-        <CDBSidebarContent className="sidebar-content">
-          <CDBSidebarMenu>
-            <NavLink to="/textbook/readme">
-              <CDBSidebarMenuItem>Forward</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/introduction">
-              <CDBSidebarMenuItem>Introduction</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/specifications">
-              <CDBSidebarMenuItem>Specifications</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/abstraction">
-              <CDBSidebarMenuItem>Abstraction</CDBSidebarMenuItem>
-            </NavLink>
-             <NavLink to="/textbook/java">
-              <CDBSidebarMenuItem>Java</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/dafny">
-              <CDBSidebarMenuItem>Dafny</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/testing">
-              <CDBSidebarMenuItem>Testing</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/equality">
-              <CDBSidebarMenuItem>Identity & Equality</CDBSidebarMenuItem>
-            </NavLink>
-             <NavLink to="/textbook/generics">
-              <CDBSidebarMenuItem>Generics</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/patterns">
-              <CDBSidebarMenuItem>Design Patterns</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/refactoring">
-              <CDBSidebarMenuItem>Refactoring</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/usability">
-              <CDBSidebarMenuItem>Usability</CDBSidebarMenuItem>
-            </NavLink>
-             <NavLink to="/textbook/gui">
-              <CDBSidebarMenuItem>GUI Programming</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/processes">
-              <CDBSidebarMenuItem>Software Processes</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/textbook/appendix">
-              <CDBSidebarMenuItem>Appendix</CDBSidebarMenuItem>
-            </NavLink>
-          </CDBSidebarMenu>
-        </CDBSidebarContent>
-      </CDBSidebar>
-    </div>
+  <>
+  <dl>
+  <dt><h2><a href="https://nazime1.github.io/Principles-of-Software/#/textbook">Principles of Software Textbook</a></h2></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/readme">Forward</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/introduction">Introduction</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/specifications">Specifications</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/reasoning">Reasoning</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/abstraction">Abstraction</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/java">Java</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/dafny">Dafny</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/testing">Testing</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/equality">Identity & Equality</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/polymorphism">Parametric Polymorphism: Generics</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/patterns">Design Patterns</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/refactoring">Refactoring</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/usability">Usability</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/gui">Graphical User Interface (GUI) Programming</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/processes">Software Processes</a></dt>
+  <dt><a href="https://nazime1.github.io/Principles-of-Software/#/textbook/appendix">Appendix</a></dt>
+  </dl>
+  </>
   )
 }
