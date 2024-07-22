@@ -1,3 +1,51 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(34, 33, 33);
+    color: rgb(201,195,195);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 300px;
+    background-color: rgba(7,7,7,0.5);
+    height: 100%;
+    min-height: 700px;
+    position: fixed;
+    left: -360px;
+    transition: left 0.5s;
+}
+
+#openCloseBtn {
+    opacity: 0;
+}
+#openCloseBtnLabel {
+    display: block;
+    font-size: 2rem;
+    color: steelblue;
+    transform: rotate(45deg);
+    transition: left 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+#openCloseBtn:checked ~ .sidebar {
+    left: 0px;
+    width: 360px;
+}
+
+#openCloseBtn:checked + #openCloseBtnLabel {
+    margin-left: 300px;
+    transform: rotate(360deg);
+}
+
+input, label {
+    z-index: 20;
+    position: fixed;
+    top: 5px;
+    left: 10px;
+}
+
 dl {
   list-style-type: none;
   margin: 20px;
