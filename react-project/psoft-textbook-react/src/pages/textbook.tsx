@@ -16,7 +16,7 @@ export default function Textbook() {
 		<br/>
 		<a href="https://github.com/nazime1/Principles-of-Software">
 			<button>GitHub</button></a>
-		<a href="/#/textbook/readme">
+		<a href="https://nazime1.github.io/Principles-of-Software/#/textbook/readme">
 		<button>Get Started</button></a>
 		</div>
 	</>

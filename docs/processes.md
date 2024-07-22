@@ -34,11 +34,11 @@ The design process is to be taken seriously; iterating over multiple possible de
 
 Part of the **Design Process** <span style="color:blue;">includes creating interaction, class, and UML diagrams</span>, all of which are shown below:
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/interaction_diagram.png)
+![](images/interaction_diagram.png)
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/class_diagram.png)
+![](images/class_diagram.png)
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/umlex.png)
+![](images/umlex.png)
 
 ### Step 3: Implementation
 
@@ -85,11 +85,11 @@ Requirements analysis is complicated.  Some significant causes of project failur
 
 Requirements can be complex because they change; errors can be found in original requirements, so they must conform with what works.  The customer also needs to evolve to match new requirements.  Technical, scheduling, and cost problems can arise here because system requirements change as the world does.  It is also often difficult to understand the implications of software design changes and other requirements.  This following graph illustrates this relationship well:
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/reqs.png)
+![](images/reqs.png)
 
 There are a few ways to measure complexity.  For example, there are **Function Points**, <span style="color:blue;">roughly the number of user interactions within the system</span>, **Cyclomatic Complexity**, the <span style="color:blue;">number of predicate nodes in a control flow graph</span>, and lines of code.  The following graph illustrates some of this well:
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/fpoints.png)
+![](images/fpoints.png)
 
 Requirements can be classified in a few different ways.  For example, the **FURPS+ Model** is an acronym for <span style="color:blue;">Functionality, Usability, Reliability, Performance, and Supportability</span>.  The + stands for design constraints, implementation requirements, and anything else specific to the system.
 
@@ -105,7 +105,7 @@ The **Code-And-Fix** or **Ad-Hoc** process is familiar to those readers who have
 
 ### Waterfall Process
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/waterfall.png)
+![](images/waterfall.png)
 
 With the **Waterfall Process** process, <span style="color:blue;">developers tackle all planning up front with an orderly, easy-to-follow sequential process</span>.  Stages are well-defined, so reviews at each stage determine if the product is ready to advance.  Thus, the waterfall process is ideal for experienced teams on short-term projects and projects with very well-understood requirements.  
 
@@ -115,7 +115,7 @@ There is also no sense of progress until the very end - Integration occurs then,
 
 ### Iterative Process
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/iterative.png)
+![](images/iterative.png)
 
 The iterative process accommodates and embraces change.  It provides constant feedback, so problems are visible early.  The iterative process is especially apt at the beginning of any project when requirements are still fluid.  Additionally, the most significant risks are usually addressed first, so as costs increase, risks decrease.
 
@@ -123,13 +123,13 @@ However, the iterative process could be better; it can take a lot of planning an
 
 ### Staged Delivery
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/staged.png)
+![](images/staged.png)
 
 With **Staged Delivery**, <span style="color:blue;">developers can ship their product at the end of any release, which looks like a success to customers, even if all original goals are not met</span>.  Intermediate deliveries show progress and customers are happy, leading to feedback on how to best attack new issues.  Problems are also visible early, facilitating shorter, more predictable release cycles.  Staged delivery is practical, widely used, and successful, though it requires the flexibility of management, developers, and users.
 
 ### Open Source Development
 
-![](https://principles-of-software.github.io/Principles-of-Software/images/oss.png)
+![](images/oss.png)
 
 **Open Source Development** uses a distributed model, where <span style="color:blue;">individuals or small teams of contributors are responsible for the development and maintenance of code</span>.  Contributed features are integrated into a single body of code by one or more maintainers, which ensures that newly submitted code meets the overall vision and standards set for the project.  The feature development lifecycle begins with an idea for a new project feature or enhancement, which is then proposed to project developers.  There is online discussion among contributors, and the features are released as alpha software.
 

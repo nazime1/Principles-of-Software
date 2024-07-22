@@ -51,10 +51,8 @@ If you should desire to learn more about any idea in this book, consult the Appe
 
 This is a living document meant to supplement and improve upon RPI's Principles of Software course.  Users are encouraged to use it as such, as well as a launching point for further reading into these subjects.
 
-If you find a problem or something that you'd like to dispute, please [open an issue](https://github.com/alicebibaud/Principles-of-Software/issues/new) in the GitHub repository where this is all hosted.
+If you find a problem or something that you'd like to dispute, please [open an issue](https://github.com/nazime1/Principles-of-Software/issues/new) in the GitHub repository where this is all hosted.
 
 On this website, important vocabulary words are denoted in **Bold**, with their definitions following in <span style="color:blue;">blue</span>.  This was done to clarify important text, as well as for creating flashcards so students may study the material.
 
 The only exception to the above rule is the Introduction chapter, which does not contain any definitions.  Words defined later appear there in blue.
-
-Built with [Docsify](https://docsify.js.org)
