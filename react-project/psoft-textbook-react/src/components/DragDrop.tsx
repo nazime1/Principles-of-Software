@@ -118,7 +118,7 @@ export default function DragDrop() {
           takeSnapshot();
           return ed.id === edge.id ? {...edge, data: {...edge.data, }, label: "false",} : ed;
         }
-        return edge;
+        return ed.id === edge.id ? {...edge, data: {...edge.data, }} : ed;
         }
       ),
     );
