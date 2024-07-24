@@ -42,7 +42,7 @@ export default function Index() {
   };
 
 
-  /*const handleRun = () => {
+  const handleRun = () => {
     setLoading(true);
      var obj = {
         requester: "postman",
@@ -64,7 +64,7 @@ export default function Index() {
       }
     }
     xhr.send(JSON.stringify(obj));
-  };*/
+  };
 
   const handleEditorChange = (value: string | undefined) => {
     if (value) {
@@ -103,6 +103,7 @@ export default function Index() {
           </div>
           <div className="flex flex-row justify-evenly max-h-11 mb-4">
             <button onClick={handleVerify}>Verify Dafny</button>
+            <button onClick={handleRun}>Run Dafny</button>
           </div>
         </div>
       </div>

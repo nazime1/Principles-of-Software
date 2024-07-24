@@ -107,3 +107,5 @@ We want to test all DU pairs, all DU paths, and all definitions.  Sometimes, the
 For example, in the above diagram, suppose `cond` does not change between nodes 1 and 5.  Because the state doesn't change between 1 and 5, (3, 6) is *not* a feasible DU path.
 
 Unfortunately, infeasible paths are very hard and impossible to test for, so programmers need to keep a keen eye out for unchanging states in their code.
+
+See also the [CFG Canvas tool](https://nazime1.github.io/Principles-of-Software/#/CFGCanvas) for creating your own CFG!

@@ -51,11 +51,7 @@ If you should desire to learn more about any idea in this book, consult the Appe
 
 # Repository
 
-If you find a problem or something that you'd like to dispute, please [open an issue](https://github.com/alicebibaud/Principles-of-Software/issues/new).
-
-Built with [Docsify](https://docsify.js.org)
-
-Remember to modify the [sidebar](https://github.com/alicebibaud/Principles-of-Software/blob/master/docs/_sidebar.md) whenever you add or remove a page from the handbook!
+If you find a problem or something that you'd like to dispute, please [open an issue](https://github.com/nazime1/Principles-of-Software/issues/new).
 
 ## Developing
 
@@ -63,4 +59,4 @@ Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for the suggested ways to preview
 
 ## Deploying
 
-The Textbook will be automatically deployed using GitHub pages and has `textbook.psoft.io` set as the custom domain in the repository settings. This means that the Handbook is automatically updated when the master branch is updated and can be located at <https://principles-of-software.github.io/Principles-of-Software/#/>!
+The Textbook will be automatically deployed using GitHub Pages. The textbook can be located at <https://nazime1.github.io/Principles-of-Software/#/textbook>!

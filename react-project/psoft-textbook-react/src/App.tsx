@@ -1,4 +1,6 @@
 import './App.css'
+import React from 'react';
+import { Helmet } from 'react-helmet'
 import { createHashRouter, RouterProvider, LoaderFunction, ActionFunction } from "react-router-dom";
 
 interface RouteCommon {
@@ -76,7 +78,15 @@ const router = createHashRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+  <>
+    <RouterProvider router={router} />
+    <Helmet>
+    <link rel="icon" type="image/svg+xml" href="/Logo.png" />
+        <title>PSoft Textbook + Tools</title>
+    </Helmet>
+  </>
+    );
 };
 
 export default App;
