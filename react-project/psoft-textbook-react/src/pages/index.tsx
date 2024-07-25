@@ -94,7 +94,7 @@ export default function Index() {
           />
         </div>
         <div className="flex flex-col justify-center relative pl-8">
-          <div className=" flex-grow">
+          <div className="flex-grow" style={{ whiteSpace: "pre", textAlign: "left"}}>
             {loading ? (
               <ThreeDots color="gray" height={100} width={100} />
             ) : (
