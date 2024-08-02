@@ -1,8 +1,8 @@
 # Parametric Polymorphism: Generics
 
-**Explicit Parametric Polymorphism** is the <span style="color:blue;">technical term for generic usage in object-oriented languages</span>.
+**Explicit Parametric Polymorphism** is the <span style="color:#0091ff;">technical term for generic usage in object-oriented languages</span>.
 
-Generics clarify code.  Without generics, code has pseudo-generic containers.  **Type Erasure** happens when <span style="color:blue;">all type parameters in generic types are within their bounds</span>.  Thus, the produced bytecode contains only ordinary classes, interfaces, and methods.  Type casts can be inserted if necessary to improve type safety.  Type erasure ensures that no new classes are created for parameterized types.  Consequently, generics incur no runtime overhead.
+Generics clarify code.  Without generics, code has pseudo-generic containers.  **Type Erasure** happens when <span style="color:#0091ff;">all type parameters in generic types are within their bounds</span>.  Thus, the produced bytecode contains only ordinary classes, interfaces, and methods.  Type casts can be inserted if necessary to improve type safety.  Type erasure ensures that no new classes are created for parameterized types.  Consequently, generics incur no runtime overhead.
 
 The point of generic methods is that they can be called with arguments of different types.  Based on the types of arguments passed to the generic method, the compiler handles each method call appropriately.
 
@@ -18,7 +18,7 @@ All generic method declarations have a type parameter section delimited by angle
     MySet<Integer> intSet;
     MySet<int> i; // compiler error, doesn't autobox
 
-A **Type Parameter**, or **Type Variable**, is <span style="color:blue;">an identifier that specifies a generic type name</span>.  Each type parameter section contains one or more type parameters separated by commas.  Type parameters can be used to declare a method's return type and act as placeholders for <span style="color:blue;">argument types passed to the generic method</span>, also known as **Actual Type** arguments.
+A **Type Parameter**, or **Type Variable**, is <span style="color:#0091ff;">an identifier that specifies a generic type name</span>.  Each type parameter section contains one or more type parameters separated by commas.  Type parameters can be used to declare a method's return type and act as placeholders for <span style="color:#0091ff;">argument types passed to the generic method</span>, also known as **Actual Type** arguments.
 
 A generic method's body is declared like that of any other method.  Type parameters can represent only reference types, not primitive types (like int, double, and char).  For example:
 
@@ -53,7 +53,7 @@ The compiler ensures type compatibility when using generics, so all code compone
 
 For example, `x.foo(5)`;
 
-The compiler determines the **Compile Time Class**, <span style="color:blue;">what class to look in at compile time</span>.   Then, it determines the **Method Family**, or **Method Signature**: <span style="color:blue;">all methods in the class with the correct name, including inherited methods</span>.
+The compiler determines the **Compile Time Class**, <span style="color:#0091ff;">what class to look in at compile time</span>.   Then, it determines the **Method Family**, or **Method Signature**: <span style="color:#0091ff;">all methods in the class with the correct name, including inherited methods</span>.
 Then, the compiler looks for method overrides and return types that may be subtypes of the desired outcome.  The types of the actual arguments must be the same, or be subtypes of the corresponding formal parameter type.  For example, `5` has type `int` above.
 
 The compiler keeps only methods that are accessible.  A private method is not accessible to calls from outside the class.  The compiler keeps track of the method's signature for runtime.
@@ -62,13 +62,13 @@ At run time, the compiler determines the runtime type of the receiver - `x` in t
 
 ## Parametric Polymorphism
 
-Overloading is typically referred to as "ad-hoc" polymorphism.  In contrast, in **Parametric Polymorphism**, <span style="color:blue;">methods take type as a parameter</span>.  In python, there are no explicit type parameters; the code is polymorphic because it works with many different types by default.
+Overloading is typically referred to as "ad-hoc" polymorphism.  In contrast, in **Parametric Polymorphism**, <span style="color:#0091ff;">methods take type as a parameter</span>.  In python, there are no explicit type parameters; the code is polymorphic because it works with many different types by default.
 
-**Subtype Polymorphism** is <span style="color:blue;">the ability to use a subclass where a superclass is expected</span>.  In **Implicit Parametric Polymorphism**, <span style="color:blue;">there are no explicit type parameters, yet the code works on many different types</span>.  How does implicit parametric polymorphism differ from subtype polymorphism?  Subtype polymorphism is static, and implicit parametric polymorphism is dynamic.  Subtype polymorphism requires declared types for iterable types, whereas implicit polymorphism does not.  Subtype polymorphism guarantees that every subclass of the declared type will be iterable, while implicit polymorphism does not.  For example, Java subtyping guarantees that when `intersect` is called, the runtime iterable types will implement `iteration`.  With subtype polymorphism, the compiler prevents calling `intersect(2,2)`, as an example.
+**Subtype Polymorphism** is <span style="color:#0091ff;">the ability to use a subclass where a superclass is expected</span>.  In **Implicit Parametric Polymorphism**, <span style="color:#0091ff;">there are no explicit type parameters, yet the code works on many different types</span>.  How does implicit parametric polymorphism differ from subtype polymorphism?  Subtype polymorphism is static, and implicit parametric polymorphism is dynamic.  Subtype polymorphism requires declared types for iterable types, whereas implicit polymorphism does not.  Subtype polymorphism guarantees that every subclass of the declared type will be iterable, while implicit polymorphism does not.  For example, Java subtyping guarantees that when `intersect` is called, the runtime iterable types will implement `iteration`.  With subtype polymorphism, the compiler prevents calling `intersect(2,2)`, as an example.
 
 Python, Perl, Scheme, and other dynamic languages use implicit parametric polymorphism with no explicit type parameters.  As a result, the code works with many different types.  Usually, there is a single copy of the code, and all type checking is delayed until runtime.  The code works if the arguments are of a type expected by the code.  If not, the code issues a type error at runtime.
 
-C++, Java, and C\# use **Explicit Parametric Polymorphism**, which <span style="color:blue;">has explicit type parameters for variables and methods</span>.  Explicit Parametric Polymorphism is also known as **Genericity**.  As an example, C++ has templates.  Usually, templates are implemented by creating multiple copies of the generic code, one for each concrete type argument, and then compiling.  Problems arise if the "wrong" type argument is instantiated.  In that case, the C++ compiler returns long, cryptic error messages referring to the generic (templated) code in the Standard Template Library (STL).
+C++, Java, and C\# use **Explicit Parametric Polymorphism**, which <span style="color:#0091ff;">has explicit type parameters for variables and methods</span>.  Explicit Parametric Polymorphism is also known as **Genericity**.  As an example, C++ has templates.  Usually, templates are implemented by creating multiple copies of the generic code, one for each concrete type argument, and then compiling.  Problems arise if the "wrong" type argument is instantiated.  In that case, the C++ compiler returns long, cryptic error messages referring to the generic (templated) code in the Standard Template Library (STL).
 
 Luckily, Java generics work differently from C++ templates -- there is more type-checking on generic code.  Object Oriented languages usually have both subtype and explicit parametric polymorphism, referred to as either generics or templates.
 
@@ -91,22 +91,22 @@ The convention is to use a one-letter name, such as `T`, for type.  The client s
 
 ## Bounded Types
 
-**Bounded Types** are <span style="color:blue;">generic types that extend preexisting classes</span>.  An **Upper Bound Type Argument** can be <span style="color:blue;">any of its bounded subtypes</span>.  The upper bound on a type parameter has three effects:
+**Bounded Types** are <span style="color:#0091ff;">generic types that extend preexisting classes</span>.  An **Upper Bound Type Argument** can be <span style="color:#0091ff;">any of its bounded subtypes</span>.  The upper bound on a type parameter has three effects:
 
-1. **Restricted Instantiation**: <span style="color:blue;">The upper bound restricts the set of types that can be used for instantiation of the generic type</span>.  `<T extends Number>` means `T` can be instantiated as a `Number` or an `Integer`.
-2. **Access to Non-Static Members**: <span style="color:blue;">The upper bound gives access to all upper-bound public non-static methods and fields</span>.  In the class `Box<T extends Number?>`, we can invoke all public non-static methods defined in class `Number`, such as `intValue()`.
-3. **Type Erasure**: <span style="color:blue;">The leftmost upper bound is used for type erasure and replaces the type parameter in bytecode</span>.  For example, in class `Box<T extends Number>`, all occurrences of `T` would be replaced by the upper bound `Number`.
+1. **Restricted Instantiation**: <span style="color:#0091ff;">The upper bound restricts the set of types that can be used for instantiation of the generic type</span>.  `<T extends Number>` means `T` can be instantiated as a `Number` or an `Integer`.
+2. **Access to Non-Static Members**: <span style="color:#0091ff;">The upper bound gives access to all upper-bound public non-static methods and fields</span>.  In the class `Box<T extends Number?>`, we can invoke all public non-static methods defined in class `Number`, such as `intValue()`.
+3. **Type Erasure**: <span style="color:#0091ff;">The leftmost upper bound is used for type erasure and replaces the type parameter in bytecode</span>.  For example, in class `Box<T extends Number>`, all occurrences of `T` would be replaced by the upper bound `Number`.
 
 Why doesn't Java allow Lower Bounded Type Parameters?  Two reasons:
 
-- **Access to Non-Static Members**: <span style="color:blue;">A lower-type parameter bound does not give access to any particular methods beyond those inherited from class Objects}.  For example, in `Box<T super Number>`, the supertypes of `Number` have nothing in common, except that they are reference types and, therefore, subtypes of `Object`.
-- **Type Erasure**: <span style="color:blue;">Replaces all occurrences of the type variable `T` by type `Object` and not by its lower bound}.  The lower bound would have the same effect as a "no bound."
+- **Access to Non-Static Members**: <span style="color:#0091ff;">A lower-type parameter bound does not give access to any particular methods beyond those inherited from class Objects}.  For example, in `Box<T super Number>`, the supertypes of `Number` have nothing in common, except that they are reference types and, therefore, subtypes of `Object`.
+- **Type Erasure**: <span style="color:#0091ff;">Replaces all occurrences of the type variable `T` by type `Object` and not by its lower bound}.  The lower bound would have the same effect as a "no bound."
 
 The bottom line is that `<T super Type>` does not get anyone anywhere and leads to confusion.
 
 ## Java Wildcards
 
-A **Wildcard** is <span style="color:blue;">an anonymous type variable</span>.  Use `?` when using a type variable exactly once.  `?` appears at the instantiation site of the generic - the use site, as opposed to the declaration site.  Thus, `<?  extends E>`, but not `<E extends ?>`, is valid.  The purpose of the wildcard is to make a library more flexible and easier to use by allowing limited subtyping.  Wildcards limit the kind of operations that instances of a class can perform.
+A **Wildcard** is <span style="color:#0091ff;">an anonymous type variable</span>.  Use `?` when using a type variable exactly once.  `?` appears at the instantiation site of the generic - the use site, as opposed to the declaration site.  Thus, `<?  extends E>`, but not `<E extends ?>`, is valid.  The purpose of the wildcard is to make a library more flexible and easier to use by allowing limited subtyping.  Wildcards limit the kind of operations that instances of a class can perform.
 
 Wildcards appear at the instantiations of generic objects.  There is also `<?  super E>`.  Intuitively, `<?  extends E>` makes sense here: the syntax `<?  extends E>` means "type E or a subtype of E."
 

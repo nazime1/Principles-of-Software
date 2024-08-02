@@ -4,21 +4,21 @@ Some software lifecycle activities require analysis, design, implementation, int
 
 ## Software Life cycle and Artifacts
 
-The **Software Lifecycle** is <span style="color:blue;">the process of building and maintaining a software system</span>.  The activities from inception to end-of-life can take months or years.  Each activity has specific goals.  It defines a clear set of steps, produces an artifact (tangible item), allows for review, and specifies actions to perform in the next activity.
+The **Software Lifecycle** is <span style="color:#0091ff;">the process of building and maintaining a software system</span>.  The activities from inception to end-of-life can take months or years.  Each activity has specific goals.  It defines a clear set of steps, produces an artifact (tangible item), allows for review, and specifies actions to perform in the next activity.
 
 Prescribed activities create valuable artifacts:
 
-1. **Requirements Analysis** <span style="color:blue;">produces requirements documents and supplementary specifications</span>
-2. The **Design Process** <span style="color:blue;">produces design models and artifacts</span>
-3. **Implementation** <span style="color:blue;">produces readable, modular code</span>
-4. **Testing** <span style="color:blue;">produces test suites as artifacts</span>
-5. **Maintenance** <span style="color:blue;">continues software development processes at a smaller scale throughout the whole system for the software's lifecycle</span>
+1. **Requirements Analysis** <span style="color:#0091ff;">produces requirements documents and supplementary specifications</span>
+2. The **Design Process** <span style="color:#0091ff;">produces design models and artifacts</span>
+3. **Implementation** <span style="color:#0091ff;">produces readable, modular code</span>
+4. **Testing** <span style="color:#0091ff;">produces test suites as artifacts</span>
+5. **Maintenance** <span style="color:#0091ff;">continues software development processes at a smaller scale throughout the whole system for the software's lifecycle</span>
 
 ## Steps
 
 ### Step 1: Requirements Analysis and the Use-Case Model
 
-A **Use-Case Model** is a <span style="color:blue;">model of how different types of users interact with a system to solve a problem</span> using text stories called scenarios.  A user can also be called an actor or a role at this stage.
+A **Use-Case Model** is a <span style="color:#0091ff;">model of how different types of users interact with a system to solve a problem</span> using text stories called scenarios.  A user can also be called an actor or a role at this stage.
 
 A dice game on a gaming platform is an excellent example of a use case.  The main success scenario is:
 
@@ -26,13 +26,13 @@ A dice game on a gaming platform is an excellent example of a use case.  The mai
 2. If the player rolls a seven or "doubles" (the dice match), then the player wins
 3. If not, then another player gets the chance to roll
 
-Use Cases can take many forms.  First, we have the **Brief Format**, a <span style="color:blue;">one-paragraph summary, usually for the main success scenario</span>.  Next is the **Casual Format**, which <span style="color:blue;">consists of multiple paragraphs covering various scenarios</span>.  Finally, the **Fully Dressed Format** <span style="color:blue;">includes all possible steps and variations the system is capable of supporting</span>.  Use cases are developed iteratively and often go through each stage in turn.
+Use Cases can take many forms.  First, we have the **Brief Format**, a <span style="color:#0091ff;">one-paragraph summary, usually for the main success scenario</span>.  Next is the **Casual Format**, which <span style="color:#0091ff;">consists of multiple paragraphs covering various scenarios</span>.  Finally, the **Fully Dressed Format** <span style="color:#0091ff;">includes all possible steps and variations the system is capable of supporting</span>.  Use cases are developed iteratively and often go through each stage in turn.
 
 ### Step 2: Design Process
 
 The design process is to be taken seriously; iterating over multiple possible designs until developers and clients agree on UI and specifications is the best way to guarantee success and reduce production costs over the long run.
 
-Part of the **Design Process** <span style="color:blue;">includes creating interaction, class, and UML diagrams</span>, all of which are shown below:
+Part of the **Design Process** <span style="color:#0091ff;">includes creating interaction, class, and UML diagrams</span>, all of which are shown below:
 
 ![](images/interaction_diagram.png)
 
@@ -87,11 +87,11 @@ Requirements can be complex because they change; errors can be found in original
 
 ![](images/reqs.png)
 
-There are a few ways to measure complexity.  For example, there are **Function Points**, <span style="color:blue;">roughly the number of user interactions within the system</span>, **Cyclomatic Complexity**, the <span style="color:blue;">number of predicate nodes in a control flow graph</span>, and lines of code.  The following graph illustrates some of this well:
+There are a few ways to measure complexity.  For example, there are **Function Points**, <span style="color:#0091ff;">roughly the number of user interactions within the system</span>, **Cyclomatic Complexity**, the <span style="color:#0091ff;">number of predicate nodes in a control flow graph</span>, and lines of code.  The following graph illustrates some of this well:
 
 ![](images/fpoints.png)
 
-Requirements can be classified in a few different ways.  For example, the **FURPS+ Model** is an acronym for <span style="color:blue;">Functionality, Usability, Reliability, Performance, and Supportability</span>.  The + stands for design constraints, implementation requirements, and anything else specific to the system.
+Requirements can be classified in a few different ways.  For example, the **FURPS+ Model** is an acronym for <span style="color:#0091ff;">Functionality, Usability, Reliability, Performance, and Supportability</span>.  The + stands for design constraints, implementation requirements, and anything else specific to the system.
 
 ## Software Development Processes
 
@@ -101,13 +101,13 @@ There are a few different software development strategies.  The benefits of havi
 
 ### Code-And-Fix or Ad-Hoc Process
 
-The **Code-And-Fix** or **Ad-Hoc** process is familiar to those readers who have taken RPI's data structures: <span style="color:blue;">developers write some code, make up inputs, and debug accordingly</span>.  Some advantages of this are that there is little or no overhead; programmers can dive right in and see progress quickly.  This process is useful for small, short-lived projects, but is dangerous for most other projects.  This process may ignore important tasks and artifacts such as design or testing.  Sometimes, it is not clear when to start or stop an activity.  In addition, it can be hard to review code with the ad-hoc method, so scales poorly to multiple people.
+The **Code-And-Fix** or **Ad-Hoc** process is familiar to those readers who have taken RPI's data structures: <span style="color:#0091ff;">developers write some code, make up inputs, and debug accordingly</span>.  Some advantages of this are that there is little or no overhead; programmers can dive right in and see progress quickly.  This process is useful for small, short-lived projects, but is dangerous for most other projects.  This process may ignore important tasks and artifacts such as design or testing.  Sometimes, it is not clear when to start or stop an activity.  In addition, it can be hard to review code with the ad-hoc method, so scales poorly to multiple people.
 
 ### Waterfall Process
 
 ![](images/waterfall.png)
 
-With the **Waterfall Process** process, <span style="color:blue;">developers tackle all planning up front with an orderly, easy-to-follow sequential process</span>.  Stages are well-defined, so reviews at each stage determine if the product is ready to advance.  Thus, the waterfall process is ideal for experienced teams on short-term projects and projects with very well-understood requirements.  
+With the **Waterfall Process** process, <span style="color:#0091ff;">developers tackle all planning up front with an orderly, easy-to-follow sequential process</span>.  Stages are well-defined, so reviews at each stage determine if the product is ready to advance.  Thus, the waterfall process is ideal for experienced teams on short-term projects and projects with very well-understood requirements.  
 
 There are some drawbacks to using the Waterfall process, though.  Waterfall assumes requirements are clear and well-understood, and most planning is done upfront.  Because of that assumption, its rigid and sequential nature does not embrace change well.  It can be costly to "swim upstream" back to an earlier phase because iteration is limited to the previous or next step.  
 
@@ -125,13 +125,13 @@ However, the iterative process could be better; it can take a lot of planning an
 
 ![](images/staged.png)
 
-With **Staged Delivery**, <span style="color:blue;">developers can ship their product at the end of any release, which looks like a success to customers, even if all original goals are not met</span>.  Intermediate deliveries show progress and customers are happy, leading to feedback on how to best attack new issues.  Problems are also visible early, facilitating shorter, more predictable release cycles.  Staged delivery is practical, widely used, and successful, though it requires the flexibility of management, developers, and users.
+With **Staged Delivery**, <span style="color:#0091ff;">developers can ship their product at the end of any release, which looks like a success to customers, even if all original goals are not met</span>.  Intermediate deliveries show progress and customers are happy, leading to feedback on how to best attack new issues.  Problems are also visible early, facilitating shorter, more predictable release cycles.  Staged delivery is practical, widely used, and successful, though it requires the flexibility of management, developers, and users.
 
 ### Open Source Development
 
 ![](images/oss.png)
 
-**Open Source Development** uses a distributed model, where <span style="color:blue;">individuals or small teams of contributors are responsible for the development and maintenance of code</span>.  Contributed features are integrated into a single body of code by one or more maintainers, which ensures that newly submitted code meets the overall vision and standards set for the project.  The feature development lifecycle begins with an idea for a new project feature or enhancement, which is then proposed to project developers.  There is online discussion among contributors, and the features are released as alpha software.
+**Open Source Development** uses a distributed model, where <span style="color:#0091ff;">individuals or small teams of contributors are responsible for the development and maintenance of code</span>.  Contributed features are integrated into a single body of code by one or more maintainers, which ensures that newly submitted code meets the overall vision and standards set for the project.  The feature development lifecycle begins with an idea for a new project feature or enhancement, which is then proposed to project developers.  There is online discussion among contributors, and the features are released as alpha software.
 
 Feature requests are generally tracked and prioritized using processes visible to the rest of the development community, ensuring a common understanding of features and their relative priority, development status, associated bugs, blockers, and planned release.
 

@@ -1,6 +1,6 @@
 # Refactoring
 
-Refactoring is necessary when we have complex, ugly code that works.  There is a tendency to leave that awful code alone as long as it works: "if it isn't broken, don't fix it."   The trouble there is that it often will break; it is only a matter of when.  **Refactoring** is <span style="color:blue;">a preemptive, disciplined rewrite of code likely to break in the future</span>, consisting of small-step behavior-preserving transformations, followed by the execution of test cases.  Of course, this depends on having a good suite of tests.  Continuous refactoring combined with testing is an essential software development practice.
+Refactoring is necessary when we have complex, ugly code that works.  There is a tendency to leave that awful code alone as long as it works: "if it isn't broken, don't fix it."   The trouble there is that it often will break; it is only a matter of when.  **Refactoring** is <span style="color:#0091ff;">a preemptive, disciplined rewrite of code likely to break in the future</span>, consisting of small-step behavior-preserving transformations, followed by the execution of test cases.  Of course, this depends on having a good suite of tests.  Continuous refactoring combined with testing is an essential software development practice.
 
 Programming is just refactoring a blank screen to make it act according to spec.  There are several possible refactoring methods:
 
@@ -14,7 +14,7 @@ Programming is just refactoring a blank screen to make it act according to spec.
 
 These have relatively well-defined mechanics and can be automated; Eclipse can automate some of these.
 
-**Technical Debt** <span style="color:blue;">reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution</span>.  The accumulation of technical debt often stems from the following causes.  Notice how each of these comes from ignorance of the code base or programming itself:
+**Technical Debt** <span style="color:#0091ff;">reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution</span>.  The accumulation of technical debt often stems from the following causes.  Notice how each of these comes from ignorance of the code base or programming itself:
 
 - Business pressures
 - Lack of understanding
@@ -31,19 +31,19 @@ Refactorings attack code smells.  Code Smells can be:
 
 - Any characteristic in the source code of a program that indicates a deeper problem
 - Big methods
-- A **God Class**, <span style="color:blue;">an oversized class that controls everything</span>
+- A **God Class**, <span style="color:#0091ff;">an oversized class that controls everything</span>
 - Similar methods, classes, or subclasses
 - Little or no use of subtype polymorphism
 - High coupling between objects
-- **Feature Envy**, where <span style="color:blue;">a class that uses methods of another class excessively</span>
-- **Inappropriate Intimacy**, when <span style="color:blue;">a class that depends on implementation details of another class</span>
-- **Refused Bequest** <span style="color:blue;">a class that overrides a base class method such that the contract of the base class is broken</span>
-- **Lazy Class/Freeloader**: <span style="color:blue;">a class that does too little</span>
+- **Feature Envy**, where <span style="color:#0091ff;">a class that uses methods of another class excessively</span>
+- **Inappropriate Intimacy**, when <span style="color:#0091ff;">a class that depends on implementation details of another class</span>
+- **Refused Bequest** <span style="color:#0091ff;">a class that overrides a base class method such that the contract of the base class is broken</span>
+- **Lazy Class/Freeloader**: <span style="color:#0091ff;">a class that does too little</span>
 - Excessive use of literals
-- **Cyclomatic Complexity** has <span style="color:blue;">too many branches or loops</span>
-- **Downcasting** happens when <span style="color:blue;">a type cast breaks the abstraction model</span>
-- **Orphan Variable** or **Constant Class** is <span style="color:blue;">a class that typically has a collection of constants that belong elsewhere</span>
-- **Data Clump** <span style="color:blue;">occurs when a group of variables is passed around in various parts of the program; it would be more appropriate to formally group the different variables into a single object</span>
+- **Cyclomatic Complexity** has <span style="color:#0091ff;">too many branches or loops</span>
+- **Downcasting** happens when <span style="color:#0091ff;">a type cast breaks the abstraction model</span>
+- **Orphan Variable** or **Constant Class** is <span style="color:#0091ff;">a class that typically has a collection of constants that belong elsewhere</span>
+- **Data Clump** <span style="color:#0091ff;">occurs when a group of variables is passed around in various parts of the program; it would be more appropriate to formally group the different variables into a single object</span>
 
 Smells are certain structures in the code that indicate a violation of fundamental design principles and negatively impact design quality.  They are not necessarily bugs and are not technically incorrect, though they indicate possible weaknesses in code.  They are also a reliable indicator of technical debt similar to antipatterns.
 
@@ -88,7 +88,7 @@ Replace abstract class `Price` with concrete subclasses `Regular`, `Children's`,
 
 ## Replace Temp with Query Refactoring
 
-The problem is that the temporary variable `thisAmount` is meaningless and hinders readability.  To fix this, replace `thisAmount` with the query method `each.getCharge()`.  A **Query Method** is more informative than a temporary variable, even though it <span style="color:blue;">does not modify anything</span>.
+The problem is that the temporary variable `thisAmount` is meaningless and hinders readability.  To fix this, replace `thisAmount` with the query method `each.getCharge()`.  A **Query Method** is more informative than a temporary variable, even though it <span style="color:#0091ff;">does not modify anything</span>.
 
 With the *Replace Temp with Query Method*, look for a temporary variable that is assigned only once.  Declare the temp as final, compile, and extract the right-hand side of the assignment into a query method.  Then, replace all occurrences of the temporary variable with the query.  The query method computing the temporary value should be free of side effects, which improves implementation.
 

@@ -29,19 +29,19 @@ Nothing can guarantee software quality, so we have several different testing met
 
 ## Testing Scope
 
-There are a few different testing scopes: **Unit Testing** <span style="color:blue;">checks that each module does what it should</span>.  In Object-Oriented Programming (OOP), unit testing means *class testing*, since classes are easy to break into distinct modules.  **Integration Testing** <span style="color:blue;">verifies that all parts work together as expected</span>.  Finally, **System Testing** <span style="color:blue;">checks whether the program satisfies functional requirements and works within a large software project</span>.
+There are a few different testing scopes: **Unit Testing** <span style="color:#0091ff;">checks that each module does what it should</span>.  In Object-Oriented Programming (OOP), unit testing means *class testing*, since classes are easy to break into distinct modules.  **Integration Testing** <span style="color:#0091ff;">verifies that all parts work together as expected</span>.  Finally, **System Testing** <span style="color:#0091ff;">checks whether the program satisfies functional requirements and works within a large software project</span>.
 
 ## Testing Strategies
 
 In addition to different scopes, there are a few different testing strategies, or points of view, we can use to cover our bases.
 
-**Black Box Testing** requires developers to <span style="color:blue;">ignore the code and test according to specifications</span>.  Ask, "given some input, is the produced output correct according to the spec?"  Black Box Tests are specification tests; equivalence partitioning, discussed below, is a black box testing strategy.
+**Black Box Testing** requires developers to <span style="color:#0091ff;">ignore the code and test according to specifications</span>.  Ask, "given some input, is the produced output correct according to the spec?"  Black Box Tests are specification tests; equivalence partitioning, discussed below, is a black box testing strategy.
 
 ![](images/bbt.png)
 
 Black Box Testing is advantageous because it is robust concerning changes in implementation.  Furthermore, it is independent of implementation, so test data does not need to be changed when the code is changed.  Black Box Testing also allows for independent testing, where developers unfamiliar with the code base can contribute.  Most importantly, black box tests can be written before their corresponding code; it is good practice to do so.
 
-**White Box Testing** is the practice of <span style="color:blue;">covering all possible internal logical paths of the program</span>.  Choose paths with knowledge of the implementation to cover as many use cases (or input conditions) as possible.  Unit testing, integration testing, and control-flow-based testing are white box testing strategies.
+**White Box Testing** is the practice of <span style="color:#0091ff;">covering all possible internal logical paths of the program</span>.  Choose paths with knowledge of the implementation to cover as many use cases (or input conditions) as possible.  Unit testing, integration testing, and control-flow-based testing are white box testing strategies.
 
 ![](images/wbt.png)
 
@@ -51,7 +51,7 @@ The bottom line for white and black box testing is to *test early and often*.  W
 
 ## Equivalence Partitioning
 
-**Equivalence Partitioning** <span style="color:blue;">divides input and output domains into equivalence classes</span>.  Equivalence partitioning is a good variety of black-box testing.  **Equivalence Classes** are <span style="color:blue;">partitions of comparable data from which test cases can be derived</span>.  They usually apply to input data, and it is best to test each partition once.
+**Equivalence Partitioning** <span style="color:#0091ff;">divides input and output domains into equivalence classes</span>.  Equivalence partitioning is a good variety of black-box testing.  **Equivalence Classes** are <span style="color:#0091ff;">partitions of comparable data from which test cases can be derived</span>.  They usually apply to input data, and it is best to test each partition once.
 
 Intuitively, values from different equivalence classes will drive the program through different logical paths.  We do not formally define equivalence classes, though we know:
 
@@ -76,7 +76,7 @@ Because these data dimensions are unrelated, we need to test a range of array si
 
 ## Control-Flow-Based Testing
 
-**Control Flow Based White Box Testing** requires developers to extract a control flow graph (CFG) from the code; the <span style="color:blue;">test suite must cover essential elements of this control flow graph</span>.  The idea is to define a coverage target and ensure the test suite covers the target.  The coverage target approximates the whole program.
+**Control Flow Based White Box Testing** requires developers to extract a control flow graph (CFG) from the code; the <span style="color:#0091ff;">test suite must cover essential elements of this control flow graph</span>.  The idea is to define a coverage target and ensure the test suite covers the target.  The coverage target approximates the whole program.
 
 In a CFG, each node represents a block of code.  In that, there is an entry block and an exit block.  Directed edges within the graph represent the control flow.
 
@@ -86,15 +86,15 @@ In a CFG, each node represents a block of code.  In that, there is an entry bloc
 
 ## Coverage
 
-A traditional coverage target is **Statement Coverage**, which<span style="color:blue;"> covers all statements (nodes) in the CFG</span>.  This way, we can ensure that even code that never gets executed will be tested.
+A traditional coverage target is **Statement Coverage**, which<span style="color:#0091ff;"> covers all statements (nodes) in the CFG</span>.  This way, we can ensure that even code that never gets executed will be tested.
 
-**Branch Coverage** <span style="color:blue;">tests all the edges in a CFG, where true/false statements and if/else blocks create branches</span>.  In a loop, two branch edges correspond to its boolean conditions.  In modern languages, branch coverage implies statement coverage.
+**Branch Coverage** <span style="color:#0091ff;">tests all the edges in a CFG, where true/false statements and if/else blocks create branches</span>.  In a loop, two branch edges correspond to its boolean conditions.  In modern languages, branch coverage implies statement coverage.
 
 The motivation for branch coverage is to test decision-making in the code.  However, statement coverage does not imply branch coverage because it can hit all nodes without a top edge covering.
 
 ## Definition-Use (DU) Pairs
 
-A **Def-Use Pair** consists of <span style="color:blue;">a definition and a variable where at least one path exists from the definition to the use</span>.  For example, `x = 1` could be a definition, and `y = x + 3` could be the use.  A DU Path could be from the definition of a variable to the use of the same variable, with no other definition of the variable on the path.  Loops can create infinite DU paths.
+A **Def-Use Pair** consists of <span style="color:#0091ff;">a definition and a variable where at least one path exists from the definition to the use</span>.  For example, `x = 1` could be a definition, and `y = x + 3` could be the use.  A DU Path could be from the definition of a variable to the use of the same variable, with no other definition of the variable on the path.  Loops can create infinite DU paths.
 
 ![](images/du.png)
 

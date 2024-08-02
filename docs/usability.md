@@ -14,11 +14,11 @@ Different dimensions vary in importance, depending on the user and the task.  Us
 
 ## Learnability and Memorability
 
-In humans, working memory is small: we have `7 +- 2` "chunks" of thought we can keep track of at once.  These are usually gone in ~10 seconds.  **Maintenance Rehearsal** is required to keep short-term memory from decaying, but it costs attention.  Maintenance rehearsal is <span style="color:blue;">the process of repeatedly verbalizing or thinking about a piece of information</span>.  Human short-term memory can be increased to about 30 seconds by using Maintenance Rehearsal.  
+In humans, working memory is small: we have `7 +- 2` "chunks" of thought we can keep track of at once.  These are usually gone in ~10 seconds.  **Maintenance Rehearsal** is required to keep short-term memory from decaying, but it costs attention.  Maintenance rehearsal is <span style="color:#0091ff;">the process of repeatedly verbalizing or thinking about a piece of information</span>.  Human short-term memory can be increased to about 30 seconds by using Maintenance Rehearsal.  
 
 For example, Alice wants to order a pizza, and Bob tells Alice the phone number.  Alice repeats the phone number to herself until she can type it into the phone.  Alice just used maintenance rehearsal to order the pizza.
 
-In contrast, long-term memory is practically infinite in size and duration.  Elaborative rehearsal is required to transfer short-term thoughts into long-term memory.  **Elaborative Rehearsal** is <span style="color:blue;">a memory technique that utilizes thinking about the meaning of the term to be remembered</span>.
+In contrast, long-term memory is practically infinite in size and duration.  Elaborative rehearsal is required to transfer short-term thoughts into long-term memory.  **Elaborative Rehearsal** is <span style="color:#0091ff;">a memory technique that utilizes thinking about the meaning of the term to be remembered</span>.
 
 An excellent example of elaborative rehearsal is a medical student's attempt to remember the term "neuron."  In order to permanently commit the term to memory, they look up what it means, learn its purpose, study a diagram, and think about how a neuron might relate to things they already know.  If they do (*rehearse*) this several times, they will be more likely to remember the term "neuron."
 
@@ -26,7 +26,7 @@ Consistency is required when designing software for learnability.  Similar thing
 
 ## Perception
 
-Good design makes heavy use of human perception.  For instance, humans have something called **Perceptual Fusion**, where <span style="color:blue;">stimuli ~100ms apart, or ten frames per second, seem to create a moving picture</span>.  Thus, a computer graphics response of `< 100`ms looks instantaneous.  In many cases, computer response time dictates what design choices we make:
+Good design makes heavy use of human perception.  For instance, humans have something called **Perceptual Fusion**, where <span style="color:#0091ff;">stimuli ~100ms apart, or ten frames per second, seem to create a moving picture</span>.  Thus, a computer graphics response of `< 100`ms looks instantaneous.  In many cases, computer response time dictates what design choices we make:
 
 - < 0.1 seconds: seems instantaneous
 - 0.1 - 1 seconds: user notices
@@ -35,19 +35,19 @@ Good design makes heavy use of human perception.  For instance, humans have some
 
 Software designers must also consider visibility when creating the UI and UX for a system.  For example, color blindness is pervasive, with roughly 8\% of all males unable to distinguish red from green.  With that in mind, it is good practice not to differentiate different items by color alone.  To design for visibility, make the system state visible: keep the user informed about what is happening in the application.  For instance, keep the cursor, selection highlight, and status bar visible.  Prompt feedback about user actions is also helpful and keeps users engaged.
 
-Even motor control and function affect software; humans use **Closed-Loop Control**.  We <span style="color:blue;">get sensory feedback, correct errors accordingly, and consciously, continuously, adjust muscle movements, with a cycle time of about 140ms</span>.  An excellent example is threading a needle - a slow process requiring total attention.  We also use **Open-Loop Control**, where <span style="color:blue;">the motor processor runs with no feedback in a cycle time of around 70ms</span>.  Open-loop control in practice exhibits itself in a gymnast's double-back somersault - it is a swift process!
+Even motor control and function affect software; humans use **Closed-Loop Control**.  We <span style="color:#0091ff;">get sensory feedback, correct errors accordingly, and consciously, continuously, adjust muscle movements, with a cycle time of about 140ms</span>.  An excellent example is threading a needle - a slow process requiring total attention.  We also use **Open-Loop Control**, where <span style="color:#0091ff;">the motor processor runs with no feedback in a cycle time of around 70ms</span>.  Open-loop control in practice exhibits itself in a gymnast's double-back somersault - it is a swift process!
 
-Finally, we also have something called **Fitt's Law**, which <span style="color:blue;">measures the time it takes a human to point at a target of `S` size from a distance `D`</span>.  That function can be measured as 
+Finally, we also have something called **Fitt's Law**, which <span style="color:#0091ff;">measures the time it takes a human to point at a target of `S` size from a distance `D`</span>.  That function can be measured as 
 
 `T = RT + MT = a + b log(D / S)`
 
-, where `RT` is Reaction Time, `MT` is Movement Time, and `b log(D / S)` is the index difficulty of the pointing task, such as moving a hand.  Fitt's Law applies only if a path to the target is unconstrained.  The **Steering Law**, ``T = RT + MT = a + b(D / S)``, is <span style="color:blue;">applied when the path is constrained to something like a tunnel</span>.
+, where `RT` is Reaction Time, `MT` is Movement Time, and `b log(D / S)` is the index difficulty of the pointing task, such as moving a hand.  Fitt's Law applies only if a path to the target is unconstrained.  The **Steering Law**, ``T = RT + MT = a + b(D / S)``, is <span style="color:#0091ff;">applied when the path is constrained to something like a tunnel</span>.
 
 Keeping Fitt's Law and the Steering Law in mind, make important targets big or nearby and avoid steering tasks in applications.  Provide shortcuts, such as keyboard accelerators, styles, bookmarks, and history, to increase usability.
 
 ## Safety
 
-**Modes** are <span style="color:blue;">states in which actions have different meanings</span>, as in vim's insert mode vs. vim's command mode.  Avoid mode errors by eliminating them, making them visible, or putting disjoint action sets in different modes.  Programmers and users alike need feedback about which mode their application is in.
+**Modes** are <span style="color:#0091ff;">states in which actions have different meanings</span>, as in vim's insert mode vs. vim's command mode.  Avoid mode errors by eliminating them, making them visible, or putting disjoint action sets in different modes.  Programmers and users alike need feedback about which mode their application is in.
 
 To further increase safety, consider what the user might already know about an application's tools:
 
@@ -87,7 +87,7 @@ When testing, start with a prototype, write a few (short but non-trivial) repres
 
 A significant ethical issue is informed consent - ensure the user receives this.  Ask the user to think aloud without helping, explaining, or pointing out mistakes.  Only speak up to prod the user to think aloud, and to move on to the next task when stuck.  Take lots of notes.
 
-Programmers test with users to watch for **Critical Incidents** that <span style="color:blue;">strongly affect task performance or satisfaction</span>.  User responses to these are usually negative - they can run into errors, repeat attempts, and may even curse at the tester.  However, responses can also be positive, such as "Cool!" or "Oh, now I see."  
+Programmers test with users to watch for **Critical Incidents** that <span style="color:#0091ff;">strongly affect task performance or satisfaction</span>.  User responses to these are usually negative - they can run into errors, repeat attempts, and may even curse at the tester.  However, responses can also be positive, such as "Cool!" or "Oh, now I see."  
 
 ## Review
 

@@ -8,7 +8,7 @@
 
 @media (prefers-color-scheme: dark) {
 	span {
-		color: #0091ff !important;
+		color: #0091ff;
 	}
 }
 

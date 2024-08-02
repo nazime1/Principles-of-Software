@@ -10,7 +10,7 @@ What is a variable?  A variable is a kind of state - a place to store objects.  
 
     int P = Q;
 
-P and Q are integers in this line of Java code.  P is an **r-value**, a variable on the right of the assignment operator that stores data.  Because Q is on the left, Q is an **l-value**, which refers to <span style="color:blue;">the location of Q's data</span>.  Thus, we have P and Q, but "buckets" containing data.  Because we are setting P equal to Q, we are "pouring out" the data stored in P's location, and "filling P" with the data stored in Q's location.  There are now two buckets filled with Q's data.
+P and Q are integers in this line of Java code.  P is an **r-value**, a variable on the right of the assignment operator that stores data.  Because Q is on the left, Q is an **l-value**, which refers to <span style="color:#0091ff;">the location of Q's data</span>.  Thus, we have P and Q, but "buckets" containing data.  Because we are setting P equal to Q, we are "pouring out" the data stored in P's location, and "filling P" with the data stored in Q's location.  There are now two buckets filled with Q's data.
 
 For another example:
 
@@ -40,7 +40,7 @@ In Java, local variables live on the runtime stack.  On the stack, memory is all
 
 In Java, there is no reference arithmetic needed to iterate through pointers.  A reference might be implemented by storing an address, but it is impossible to exchange integers and pointer values as in C++.  References are strongly typed in Java, whereas C/C++ pointers can point to any object using casting.  Java does not have explicit pointers, but C/C++ does.
 
-In Java, there are two ways to denote equality: `==` and `.equals`.  **==** is used when <span style="color:blue;">comparing primitive objects stored on the stack</span>, and **.equals** when <span style="color:blue;">comparing objects stored on the heap</span>.  Java is an interpreted language, while C/C++ is a compiled language.  Polymorphism is also handled differently here.
+In Java, there are two ways to denote equality: `==` and `.equals`.  **==** is used when <span style="color:#0091ff;">comparing primitive objects stored on the stack</span>, and **.equals** when <span style="color:#0091ff;">comparing objects stored on the heap</span>.  Java is an interpreted language, while C/C++ is a compiled language.  Polymorphism is also handled differently here.
 
 In Java, access control modifiers are different; protected is slightly different in C++.  Java also has built-in garbage collection, whereas C++ does not.  In C++, the programmer is responsible for memory management, whereas in Java, programmers do not need to explicitly free memory.  Below is a table with access modifiers and what they do to program visibility:
 
@@ -103,11 +103,11 @@ Java deals in subtyping, and PSoft deals in subtype polymorphism.  Subtype polym
 
 In C++, static binding is the default; dynamic binding is specified with the keyword virtual.  In Java, dynamic binding is the default; private, final, or static methods in a class use static binding.  Static binding happens at compile time; at binding, the compiler knows the class of all objects.  On the other hand, dynamic binding happens at runtime, where methods can be overridden, and the compiler does not know what type the object will be at runtime.
 
-**Overloading** is <span style="color:blue;">the ability to use the same method name with different arguments</span>.  In contrast, **Overriding** is where <span style="color:blue;">a subclass uses the same method signature as a superclass in inheritance</span>.  Overloaded methods are bound using static binding during compile time, and overridden methods are bound using dynamic binding at runtime.  
+**Overloading** is <span style="color:#0091ff;">the ability to use the same method name with different arguments</span>.  In contrast, **Overriding** is where <span style="color:#0091ff;">a subclass uses the same method signature as a superclass in inheritance</span>.  Overloaded methods are bound using static binding during compile time, and overridden methods are bound using dynamic binding at runtime.  
 
 Subtype Polymorphism is useful because it enables extensibility and reuse.  It also enables (and depends on) the open/closed principle.
 
-Dispatching - what is dispatching?  It is where the compiler knows the apparent type of an object, while at runtime, the object has an actual type.  **Dispatching** <span style="color:blue;">calls code in its actual type at runtime</span>.
+Dispatching - what is dispatching?  It is where the compiler knows the apparent type of an object, while at runtime, the object has an actual type.  **Dispatching** <span style="color:#0091ff;">calls code in its actual type at runtime</span>.
 
 ## Exceptions
 

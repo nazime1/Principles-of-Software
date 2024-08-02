@@ -1,6 +1,6 @@
 # Specifications
 
-A **Precondition** is a <span style="color:blue;">condition that must be true before method execution</span>, and a **Postcondition** is a <span style="color:blue;">condition that must be true after method execution</span>.  A **Specification** is <span style="color:blue;">a contract between a method and its caller, consisting of a precondition and a postcondition</span>.  Specifications are beneficial because they precisely document method behavior, which makes it easier for programmers to parse the code.  Specifications promote modularity by organizing code into **Modules**, <span style="color:blue;">small chunks called with clear-cut boundaries</span>.  Specifications promote abstraction because the **Client**, <span style="color:blue;">the person or system using the code</span>, can rely on the specification to predict program functionality instead of code.  The client should not need to know the implementation of the code.  
+A **Precondition** is a <span style="color:#0091ff;">condition that must be true before method execution</span>, and a **Postcondition** is a <span style="color:#0091ff;">condition that must be true after method execution</span>.  A **Specification** is <span style="color:#0091ff;">a contract between a method and its caller, consisting of a precondition and a postcondition</span>.  Specifications are beneficial because they precisely document method behavior, which makes it easier for programmers to parse the code.  Specifications promote modularity by organizing code into **Modules**, <span style="color:#0091ff;">small chunks called with clear-cut boundaries</span>.  Specifications promote abstraction because the **Client**, <span style="color:#0091ff;">the person or system using the code</span>, can rely on the specification to predict program functionality instead of code.  The client should not need to know the implementation of the code.  
 
 Methods must support their specifications, but their implementation is otherwise free, so the method and client code can be built simultaneously.  Specifications enable reasoning about correctness, which can then confirm correctness through testing and verification.
 
@@ -15,7 +15,7 @@ Too weak a spec imposes too many preconditions and gives too few guarantees.  To
 
 ## Why not Just Read Code?
 
-Why not just read the code to see what is happening in the system?  Code is complicated; large systems contain more detail than anyone trying to parse the abstractions needs, and understanding code can be a sizeable cognitive burden.  Code is also ambiguous - it is often unclear what is essential and incidental in the code base.  **Incidental Code** is <span style="color:blue;">dead code that comes about as the result of optimization</span>.  Most importantly, the client needs to know what the code does, not how it works!  Even in mathematical and scientific software, the user can only know *some* implementation details.
+Why not just read the code to see what is happening in the system?  Code is complicated; large systems contain more detail than anyone trying to parse the abstractions needs, and understanding code can be a sizeable cognitive burden.  Code is also ambiguous - it is often unclear what is essential and incidental in the code base.  **Incidental Code** is <span style="color:#0091ff;">dead code that comes about as the result of optimization</span>.  Most importantly, the client needs to know what the code does, not how it works!  Even in mathematical and scientific software, the user can only know *some* implementation details.
 
 What about comments?  Those are important, but not sufficient, for proper specification.  They are often informal, ambiguous, or misleading, so they cannot stand in for formal specs.  Comments must also be updated in tandem with the code to avoid problematic misunderstandings, which does not happen often enough in the real world.  Unfortunately, most code lacks specification; programmers guess what it does by skimming through or running it.  Lack of documentation results in bugs and complex code with undefined behavior.  It would be cool to generate code from specifications; this is currently in development and available in some spaces.
 
@@ -27,7 +27,7 @@ A complex specification is a red flag; it is better to simplify design and code 
 
 There are standard specification conventions that make writing readable code easier.  There are many to choose from.
 
-**JavaDoc** specifications are <span style="color:blue;">simple text descriptions of the method's behavior that reside in a method's type signature</span>:
+**JavaDoc** specifications are <span style="color:#0091ff;">simple text descriptions of the method's behavior that reside in a method's type signature</span>:
 
     /**
     ** parameters: text description of what gets passed
@@ -36,7 +36,7 @@ There are standard specification conventions that make writing readable code eas
     **/
     public String methodName() { ... }
 
-**Principles of Software (PSoft)** specification conventions are also included in the code as comments.  <span style="color:blue;">The precondition is the `requires` clause, and the postcondition is comprised of all other clauses</span>:
+**Principles of Software (PSoft)** specification conventions are also included in the code as comments.  <span style="color:#0091ff;">The precondition is the `requires` clause, and the postcondition is comprised of all other clauses</span>:
 
     /**
     ** requires: clause spells out constraints on client code
@@ -56,7 +56,7 @@ Sometimes it can be hard to capture all potentially relevant details in the spec
 
 The `requires` clause is critical in PSoft Specifications.  If the client fails to provide preconditions, then the method can do anything it wants -- even throw an exception or return an object of the wrong type.  It is important to double-check the `requires` clause in method implementation.  Checking preconditions makes implementation more robust, provides feedback to the client, and avoids silent errors.  It is not always necessary to check the preconditions of private methods since those are not client-facing and should be compliant with specifications by default.  However, if the method is public, preconditions should be checked unless such a check is computationally expensive.
 
-**Java Modeling Language (JML)** is another important specification convention;  Javadocs and PSoft specifications are not "machine-checkable" languages, whereas JML is.  JML is <span style="color:blue;">a formal specification language built on Hoare logic</span>.  The end goal of JML is automatic verification.  Here is an example of a binary search implementation with JML specs, adapted from the OpenJML Tutorial:
+**Java Modeling Language (JML)** is another important specification convention;  Javadocs and PSoft specifications are not "machine-checkable" languages, whereas JML is.  JML is <span style="color:#0091ff;">a formal specification language built on Hoare logic</span>.  The end goal of JML is automatic verification.  Here is an example of a binary search implementation with JML specs, adapted from the OpenJML Tutorial:
 
     public class BinarySearch {
         //@ requires sortedArray != null && 0 < sortedArray.length < Integer.MAX_VALUE;
@@ -92,7 +92,7 @@ The `requires` clause is critical in PSoft Specifications.  If the client fails 
 
 ## Autoboxing and Unboxing
 
-A **Primitive Data Type** in Java is <span style="color:blue;">an object whose value is intrinsic and does not have the properties of an object</span>.  However, **Boxing**, <span style="color:blue;">the practice of wrapping primitive values in Java objects</span>, can impart object properties onto primitives.  Boxing is useful when comparing Java objects to primitives.  Java has a feature called **Autoboxing**, <span style="color:blue;">automatically Boxing primitives where needed</span>.  **Unboxing** <span style="color:blue;">automatically converts Java objects (boxed types) to primitive types when required</span>.
+A **Primitive Data Type** in Java is <span style="color:#0091ff;">an object whose value is intrinsic and does not have the properties of an object</span>.  However, **Boxing**, <span style="color:#0091ff;">the practice of wrapping primitive values in Java objects</span>, can impart object properties onto primitives.  Boxing is useful when comparing Java objects to primitives.  Java has a feature called **Autoboxing**, <span style="color:#0091ff;">automatically Boxing primitives where needed</span>.  **Unboxing** <span style="color:#0091ff;">automatically converts Java objects (boxed types) to primitive types when required</span>.
 
 Here is an example of Boxing, Autoboxing, and Unboxing:
 
@@ -114,7 +114,7 @@ Sometimes, we need to compare specifications.  Specifications can be compared in
 
 Use whichever is most convenient; comparing specs enables reasoning about substitutability.  For instance, "`P` is stronger than `Q`" means that, for every implementation `Q`, `Q` satisfies `P -> Q` satisfies `P`.  If the implementation satisfies the stronger spec (`P`), it also satisfies the weaker (`Q`).  However, the opposite is not necessarily true.  In general, we want substantial specifications.  A larger world of implementations satisfies the weaker spec `Q`, then the stronger spec `P`.  Consequently, a weaker spec can save time and energy while still being apt for its application.
 
-Specifications can be strengthened by weakening their preconditions and strengthening their postconditions.  For example, with **Contravariance**, <span style="color:blue;">supertypes can replace argument types, weakening the precondition</span>.  Similarly, with **Covariance**, <span style="color:blue;">a subtype can replace a method's output type</span>.  Either way, types can be adjusted so specifications do not violate the client's expectations.  Just do not throw any new exceptions.
+Specifications can be strengthened by weakening their preconditions and strengthening their postconditions.  For example, with **Contravariance**, <span style="color:#0091ff;">supertypes can replace argument types, weakening the precondition</span>.  Similarly, with **Covariance**, <span style="color:#0091ff;">a subtype can replace a method's output type</span>.  Either way, types can be adjusted so specifications do not violate the client's expectations.  Just do not throw any new exceptions.
 
 A stronger specification is easier to use - the client has fewer preconditions to meet, and the client gets more guarantees in postconditions.  However, they are also harder to implement.  On the other hand, a weaker specification is easier to implement because it has a more extensive set of preconditions, relieves implementation from the burden of catching errors, and is easier to guarantee less to the client in the postcondition.  Unfortunately, with all of this simplification, weaker specs are often more challenging to use due to their lack of rigor.
 
@@ -124,7 +124,7 @@ Specification `B` consists of precondition `P_B` and postcondition `Q_B`.  Speci
 `Q_B -> Q_C && P_B == P_C` is valid.
 `P_C -> P_B && Q_C -> Q_B`, you can't say which is stronger.
 
-Sometimes, we use a method where another is expected with subclasses.  We must obey the **Liskov Principle of Substitutability**: <span style="color:blue;">An object with a stronger specification can be substituted for an object with a weaker one without altering desirable properties like correctness or tasks performed</span>.
+Sometimes, we use a method where another is expected with subclasses.  We must obey the **Liskov Principle of Substitutability**: <span style="color:#0091ff;">An object with a stronger specification can be substituted for an object with a weaker one without altering desirable properties like correctness or tasks performed</span>.
 
 ## Satisfaction of Specifications
 

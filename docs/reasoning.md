@@ -3,8 +3,8 @@ Reasoning about code allows us to understand the exact behavior of our code befo
 
 There are two types of reasoning:
 
-1. **Forward Reasoning:** <span style="color:blue;">Given a precondition, does the postcondition hold?</span>  This approach is suitable for discovering previously unknown edge cases in a program's output.
-2. **Backward Reasoning:** <span style="color:blue;">Given a postcondition, what is the proper precondition?</span>  This approach is useful for finding out which inputs are causing errors.
+1. **Forward Reasoning:** <span style="color:#0091ff;">Given a precondition, does the postcondition hold?</span>  This approach is suitable for discovering previously unknown edge cases in a program's output.
+2. **Backward Reasoning:** <span style="color:#0091ff;">Given a postcondition, what is the proper precondition?</span>  This approach is useful for finding out which inputs are causing errors.
 
 Backward reasoning is usually preferable to forward reasoning.  Given a specific goal, backward reasoning shows what must be true before execution to achieve desired results.  Given an error, it gives input that exposes the error.
 
@@ -38,9 +38,9 @@ Computing the weakest possible precondition for loops is a complex problem to so
 
 Reasoning about loops can be tricky because a loop represents an unknown number of paths.  Recursion presents the same problem - it might not be possible to enumerate all paths.  The key to both is to choose a loop invariant, then prove by induction that the loop's specifications hold for each iteration.
 
-A **Loop Invariant** is <span style="color:blue;">a condition that is true immediately before and immediately after each iteration of a loop</span>.  The execution of the loop body should preserve it.  However, it does not say anything about the state of specifications part of the way through; this is because variables often change during loop execution in ways that temporarily violate the spec.  We can reason about loop invariants using induction.
+A **Loop Invariant** is <span style="color:#0091ff;">a condition that is true immediately before and immediately after each iteration of a loop</span>.  The execution of the loop body should preserve it.  However, it does not say anything about the state of specifications part of the way through; this is because variables often change during loop execution in ways that temporarily violate the spec.  We can reason about loop invariants using induction.
 
-In **Forward Reasoning in a Loop**, <span style="color:blue;">a loop invariant must be true before entering the loop, after each iteration, and after the loop exits</span>.  It must also be relevant.  A good loop invariant should involve the changing loop variable and the postcondition.  *The decrementing function and the loop invariant must imply the postcondition*
+In **Forward Reasoning in a Loop**, <span style="color:#0091ff;">a loop invariant must be true before entering the loop, after each iteration, and after the loop exits</span>.  It must also be relevant.  A good loop invariant should involve the changing loop variable and the postcondition.  *The decrementing function and the loop invariant must imply the postcondition*
 
 ![](https://principles-of-software.github.io/Principles-of-Software/images/freasoning_loop.pngimages\freasoning_loop.png)
 
@@ -50,11 +50,11 @@ Reasoning about ADTs uses induction.  When reasoning about representation invari
 
 The steps to successful induction are as follows:
 
-1. **Initial Step:** <span style="color:blue;">Prove the proposition is true for n = 0</span>.
-2. **Inductive Step:** <span style="color:blue;">Prove that if the proposition is true for n = k, then it must also be true for n = k + 1</span>.  This step is complex, and breaking it up into several stages helps.
-    - **Inductive Hypothesis:** <span style="color:blue;">Assume what the proposition asserts for the case n = k</span>.
-    - **Step 2:** <span style="color:blue;">Write down what the proposition asserts for the case n = k + 1.  This is what the induction proves</span>.
-    - **Step 3:** <span style="color:blue;">Prove the statement in Stage 2 using the assumption in Stage 1</span>.  The technique varies from problem to problem, depending on the mathematical content.
+1. **Initial Step:** <span style="color:#0091ff;">Prove the proposition is true for n = 0</span>.
+2. **Inductive Step:** <span style="color:#0091ff;">Prove that if the proposition is true for n = k, then it must also be true for n = k + 1</span>.  This step is complex, and breaking it up into several stages helps.
+    - **Inductive Hypothesis:** <span style="color:#0091ff;">Assume what the proposition asserts for the case n = k</span>.
+    - **Step 2:** <span style="color:#0091ff;">Write down what the proposition asserts for the case n = k + 1.  This is what the induction proves</span>.
+    - **Step 3:** <span style="color:#0091ff;">Prove the statement in Stage 2 using the assumption in Stage 1</span>.  The technique varies from problem to problem, depending on the mathematical content.
 
 Use ingenuity, common sense, and knowledge of mathematics here.  Additionally, RPI's Foundations of Computer Science class and associated text have suitable methods for solving proofs with induction.
 
@@ -78,13 +78,13 @@ To illustrate this concept, see the example below:
 
 ## Hoare Logic
 
-**Hoare Logic** is <span style="color:blue;">a formal framework for reasoning about code</span>; its proper use can mechanize the process of reasoning about code.  Sir Anthony Hoare created (or discovered, depending on your beliefs) Hoare Logic, the quicksort algorithm, and a bunch of programming languages.  He won the Turing award in 1980.
+**Hoare Logic** is <span style="color:#0091ff;">a formal framework for reasoning about code</span>; its proper use can mechanize the process of reasoning about code.  Sir Anthony Hoare created (or discovered, depending on your beliefs) Hoare Logic, the quicksort algorithm, and a bunch of programming languages.  He won the Turing award in 1980.
 
-A **Hoare Triple** is written as <span style="color:blue;">{`P`}`code`{`Q`}</span>, where `P` and `Q` are logical statements about program values, and `code` is a given program's code.  If a program satisfies condition `P` before execution terminates, it will terminate in a state satisfying condition `Q`.  In other words, *If `P` && `code`, then `Q`*.
+A **Hoare Triple** is written as <span style="color:#0091ff;">{`P`}`code`{`Q`}</span>, where `P` and `Q` are logical statements about program values, and `code` is a given program's code.  If a program satisfies condition `P` before execution terminates, it will terminate in a state satisfying condition `Q`.  In other words, *If `P` && `code`, then `Q`*.
 
 Why care about Hoare triples?  Because they can help us guarantee postconditions using preconditions and code.
 
-In a Hoare triple, we want the **Weakest Possible Precondition**: the <span style="color:blue;">most lenient condition possible, which still ensures correct output</span>.  Similarly, we want the **Strongest Possible Postcondition**: the <span style="color:blue;">most restrictive postcondition possible, which still allows the precondition to hold</span>.
+In a Hoare triple, we want the **Weakest Possible Precondition**: the <span style="color:#0091ff;">most lenient condition possible, which still ensures correct output</span>.  Similarly, we want the **Strongest Possible Postcondition**: the <span style="color:#0091ff;">most restrictive postcondition possible, which still allows the precondition to hold</span>.
 
 We can always substitute a stronger precondition, and the original Hoare triple can still be true.  We can always substitute a weaker postcondition, and the Hoare triple can still be true.  In an if-then-else block, we take the if and else statements and stick them in the Hoare triple like this, "or-ed" together:
 

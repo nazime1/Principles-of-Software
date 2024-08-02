@@ -2,19 +2,19 @@
 
 A design pattern is a generic solution to a recurring design problem.   Design patterns seek to solve common programming problems with a few common solutions:
 
-- **Encapsulation**: <span style="color:blue;">Hiding implementation components in a layer below what the client can access</span>.
-- **Subclassing**: <span style="color:blue;">Making a "wrapper" that implements something else to reduce repetition</span>.
-- **Iteration**: <span style="color:blue;">The object does traversals to access all members of a collection</span>.
-- **Exceptions**: <span style="color:blue;">Errors in one part of the code should be handled elsewhere, so the language is structured for throwing and catching exceptions</span>.
-- **Generics**: <span style="color:blue;">Generic types allow users to use objects of any type in data structures</span>.
+- **Encapsulation**: <span style="color:#0091ff;">Hiding implementation components in a layer below what the client can access</span>.
+- **Subclassing**: <span style="color:#0091ff;">Making a "wrapper" that implements something else to reduce repetition</span>.
+- **Iteration**: <span style="color:#0091ff;">The object does traversals to access all members of a collection</span>.
+- **Exceptions**: <span style="color:#0091ff;">Errors in one part of the code should be handled elsewhere, so the language is structured for throwing and catching exceptions</span>.
+- **Generics**: <span style="color:#0091ff;">Generic types allow users to use objects of any type in data structures</span>.
 
 SOLID Design Principles:
 
-- **Single Responsibility Principle**: <span style="color:blue;">A class should have only one responsibility</span>.
-- **Open-Closed Principle**: <span style="color:blue;">A class's behavior can be extended without modifying it</span>.
-- **Liscov Substitution Principle**: <span style="color:blue;">The derived classes must be substitutable for their base classes</span>.
-- **Interface Segregation Principle**: <span style="color:blue;">Many client-specific interfaces are better than one general-purpose interface</span>.
-- **Dependency Inversion Principle**: <span style="color:blue;">Implementation should depend on abstractions, not concrete implementations</span>.
+- **Single Responsibility Principle**: <span style="color:#0091ff;">A class should have only one responsibility</span>.
+- **Open-Closed Principle**: <span style="color:#0091ff;">A class's behavior can be extended without modifying it</span>.
+- **Liscov Substitution Principle**: <span style="color:#0091ff;">The derived classes must be substitutable for their base classes</span>.
+- **Interface Segregation Principle**: <span style="color:#0091ff;">Many client-specific interfaces are better than one general-purpose interface</span>.
+- **Dependency Inversion Principle**: <span style="color:#0091ff;">Implementation should depend on abstractions, not concrete implementations</span>.
 
 Design patterns do not solve all design problems, but they can increase code clarity and improve modularity.  There are three different kinds of design patterns: creational patterns, structural patterns, and behavioral patterns.  Before we can go into detail about definitions, uses, and examples of each design pattern, UML diagrams need discussion.  These give context to code structures and will be used in code examples.
 
@@ -39,7 +39,7 @@ UML associations often represent a composition relationship; objects of one clas
 
 ### Abstract Factory
 
-The **Abstract Factory** pattern <span style="color:blue;">provides an interface for creating families of related or dependent objects without specifying their concrete classes</span>.  For example, the `AbstractSoupFactory` defines the method names and return types to make various kinds of soup.
+The **Abstract Factory** pattern <span style="color:#0091ff;">provides an interface for creating families of related or dependent objects without specifying their concrete classes</span>.  For example, the `AbstractSoupFactory` defines the method names and return types to make various kinds of soup.
 
 The `BostonConcreteSoupFactory` and the `HonoluluConcreteSoupFactory` both extend the `AbstractSoupFactory`.
 
@@ -157,7 +157,7 @@ The UML diagram for this `AbstractSoupFactory` system is pictured below:
 
 ### Builder
 
-The **Builder** pattern <span style="color:blue;">separates the construction of a complex object from its representation so that the same construction process can create different representations</span>.  In this example, the abstract `SoupBuffetBuilder` defines the methods necessary to create a `SoupBuffet`.
+The **Builder** pattern <span style="color:#0091ff;">separates the construction of a complex object from its representation so that the same construction process can create different representations</span>.  In this example, the abstract `SoupBuffetBuilder` defines the methods necessary to create a `SoupBuffet`.
 
 `BostonSoupBuffetBuilder` and the `HonoluluSoupBuffetBuilder` both extend the `SoupBuffetBuilder`.
 
@@ -455,7 +455,7 @@ The UML diagram for this `SoupBuffetBuilder` system is pictured below:
 ![](images/builderuml.png)
 
 ### Factory Method
-The **Factory** pattern <span style="color:blue;">defines an interface for creating an object, but lets subclasses decide which class to instantiate</span>.  The factory method lets a class defer instantiation to subclasses.
+The **Factory** pattern <span style="color:#0091ff;">defines an interface for creating an object, but lets subclasses decide which class to instantiate</span>.  The factory method lets a class defer instantiation to subclasses.
 
 For example, the `SoupFactoryMethod` defines the `makeSoupBuffet` method, which returns a `SoupBuffet` object.  The `SoupFactoryMethod` also defines the methods needed in creating the `SoupBuffet`.
 
@@ -579,7 +579,7 @@ This factory method example also uses the `Soup.java` subclass.  Pictured below 
 
 ### Prototype
 
-With the **Prototype** pattern, <span style="color:blue;">developers can specify the kinds of objects to create using a prototypical instance and create new objects by copying this prototype</span>.  In other words, new objects can be created by cloning prototypical objects.
+With the **Prototype** pattern, <span style="color:#0091ff;">developers can specify the kinds of objects to create using a prototypical instance and create new objects by copying this prototype</span>.  In other words, new objects can be created by cloning prototypical objects.
 For example, there are several prototype objects (`AbstractSpoon.java`, `AbstractFork.java`) and a factory object that make up this system:
 
     public class PrototypeFactory {  
@@ -627,7 +627,7 @@ Notice how these classes are all minimal compared to the abstract classes they e
 
 ### Singleton
 
-The **Singleton** design pattern <span style="color:blue;">ensures that a class only has one instance and provides a global point of access to it</span>.
+The **Singleton** design pattern <span style="color:#0091ff;">ensures that a class only has one instance and provides a global point of access to it</span>.
 
 For example, the `SingleSpoon` class holds one instance of `SingleSpoon in private static SingleSpoon theSpoon;`.  The `SingleSpoon` class determines the spoons availability using `private static boolean theSpoonIsAvailable = true;`.  The first time `SingleSpoon.getTheSpoon()` is called, it creates an instance of a `SingleSpoon`.  The `SingleSpoon` cannot be distributed again until it is returned with `SingleSpoon.returnTheSpoon()`.
 
@@ -688,7 +688,7 @@ The UML diagram for this example is featured below:
 
 ### Adapter
 
-With the **Adapter** design pattern, <span style="color:blue;">developers convert the interface of a class into another interface that clients expect</span>.  An adapter lets classes work together that otherwise could not because of incompatible interfaces.
+With the **Adapter** design pattern, <span style="color:#0091ff;">developers convert the interface of a class into another interface that clients expect</span>.  An adapter lets classes work together that otherwise could not because of incompatible interfaces.
 
 For example, the `TeaBall` class takes in an instance of `LooseLeafTea`.  The `TeaBall` class uses the `steepTea` method from `LooseLeafTea` and adapts it to provide the `steepTeaInCup` method, which the `TeaCup` class requires.  See `TeaBag.java` below:
 
@@ -756,7 +756,7 @@ Notice how the root class is uncomplicated and has exactly as many extensions as
 
 ### Bridge
 
-The **Bridge** pattern <span style="color:blue;">decouples an abstraction from its implementation so that the two can vary independently</span>.  The UML diagram below illustrates the Bridge structure well:
+The **Bridge** pattern <span style="color:#0091ff;">decouples an abstraction from its implementation so that the two can vary independently</span>.  The UML diagram below illustrates the Bridge structure well:
 
 ![](images/bridgeuml.png)
 
@@ -849,7 +849,7 @@ The very small `SodaImp.java` class connects these abstract classes to a concret
 
 ### Composite
 
-The **Composite** design pattern <span style="color:blue;">allows developers to compose objects into tree structures to represent part-whole hierarchies</span>.  Composite lets clients treat individual objects and compositions of objects uniformly by assembling groups of objects with the same signature.  Consider the `TeaBags.java` example once again, with the composite of all tea bags being `TinOfTeaBags.java`:
+The **Composite** design pattern <span style="color:#0091ff;">allows developers to compose objects into tree structures to represent part-whole hierarchies</span>.  Composite lets clients treat individual objects and compositions of objects uniformly by assembling groups of objects with the same signature.  Consider the `TeaBags.java` example once again, with the composite of all tea bags being `TinOfTeaBags.java`:
 
     import java.util.LinkedList;
     import java.util.ListIterator;
@@ -948,7 +948,7 @@ The UML diagram for this example is pictured below:
 
 ### Decorator or Wrapper
 
-The **Decorator**, or **Wrapper** pattern, <span style="color:blue;">allows developers to attach additional responsibilities to an object dynamically</span>.  Decorators provide a flexible alternative to subclassing for extending functionality.  A wrapper is a thin layer over an encapsulated class that uses composition/delegation to modify its interface - as we do with `GraphWrapper` in class.  The wrapper extends the behavior of the encapsulated class and restricts access to the encapsulated object.  The encapsulated object (delegate) does most of the work.
+The **Decorator**, or **Wrapper** pattern, <span style="color:#0091ff;">allows developers to attach additional responsibilities to an object dynamically</span>.  Decorators provide a flexible alternative to subclassing for extending functionality.  A wrapper is a thin layer over an encapsulated class that uses composition/delegation to modify its interface - as we do with `GraphWrapper` in class.  The wrapper extends the behavior of the encapsulated class and restricts access to the encapsulated object.  The encapsulated object (delegate) does most of the work.
 
 For example, a decorator class (`ChaiDecorator.java` here) takes in a delegate class (`TeaLeaves.java` in this case), both of which extend the same abstract class (`Tea.java`) and adds functionality to the delegate.  See the example code below:
 
@@ -1016,7 +1016,7 @@ The UML diagram for this relationship is featured below:
 
 ### Facade
 
-In the **Facade** pattern, <span style="color:blue;">one class has a method that calls several other classes to achieve complex goals</span>.  The pattern is useful for providing a unified interface to a set of interfaces in a subsystem; a facade defines a higher-level interface that makes the subsystem easier to use.
+In the **Facade** pattern, <span style="color:#0091ff;">one class has a method that calls several other classes to achieve complex goals</span>.  The pattern is useful for providing a unified interface to a set of interfaces in a subsystem; a facade defines a higher-level interface that makes the subsystem easier to use.
 This design pattern uses no polymorphism, so use this class if extending classes is difficult, impossible, or clunky.
 
 Below are four classes: `FacadeCuppaMaker.java`, the facade in the system, and the three classes it interfaces: `FacadeTeaCup.java`, `FacadeWater.java`, and `FacadeTeaBag.java`.  Take note of the method `FacadeCuppaMaker.java` uses to instantiate all these objects:
@@ -1140,7 +1140,7 @@ A UML diagram detailing the interfacing of these objects is pictured below.  Her
 
 ### Flyweight
 
-The **Flyweight** pattern <span style="color:blue;">uses sharing to efficiently support large numbers of fine-grained objects</span>.  A class's reusable and variable parts are broken into two classes: the flyweight (`TeaOrder.java`) and the context (`TeaOrderContext java`), to save resources.  This example uses tea and several helper classes to show the relationship between objects:
+The **Flyweight** pattern <span style="color:#0091ff;">uses sharing to efficiently support large numbers of fine-grained objects</span>.  A class's reusable and variable parts are broken into two classes: the flyweight (`TeaOrder.java`) and the context (`TeaOrderContext java`), to save resources.  This example uses tea and several helper classes to show the relationship between objects:
 
 
     public abstract class TeaOrder {  
@@ -1204,7 +1204,7 @@ This example also contains a factory for simplicity.  The UML for this example i
 
 ### Proxy
 
-The **Proxy** design pattern <span style="color:blue;">provides a surrogate or placeholder for another object to control access to the main class</span>.  The Proxy, here `PotOfTeaProxy.java`, controls the creation of and access to objects in another the subject, here `PotOfTea.java`:
+The **Proxy** design pattern <span style="color:#0091ff;">provides a surrogate or placeholder for another object to control access to the main class</span>.  The Proxy, here `PotOfTeaProxy.java`, controls the creation of and access to objects in another the subject, here `PotOfTea.java`:
 
     //PotOfTeaInterface will ensure that the proxy
     //  has the same methods as its real subject
@@ -1241,7 +1241,7 @@ A UML diagram detailing the proxy relationship is below:
 
 ### Chain of Responsibility
 
-The **Chain of Responsibility** pattern helps developers <span style="color:blue;">avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request</span>.  Instead, use the pattern to chain the receiving objects together and pass the request along until an object handles it.  A method called in one class will move up a class hierarchy until a method is found that can properly handle the call.
+The **Chain of Responsibility** pattern helps developers <span style="color:#0091ff;">avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request</span>.  Instead, use the pattern to chain the receiving objects together and pass the request along until an object handles it.  A method called in one class will move up a class hierarchy until a method is found that can properly handle the call.
 In this example, we use a DvD class hierarchy to illustrate the strata necessary for deploying the Chain of Responsibility:
 
 
@@ -1404,7 +1404,7 @@ The hierarchical structure of these classes and their relationship is well illus
 
 ### Command Pattern
 
-The **Command Pattern** design pattern <span style="color:blue;">encapsulates a request as an object, letting programmers parameterize clients with different requests, queue or log requests, and support undoable operations</span>.  In this pattern, a commanding object encapsulates everything needed to execute a method in a receiver object.
+The **Command Pattern** design pattern <span style="color:#0091ff;">encapsulates a request as an object, letting programmers parameterize clients with different requests, queue or log requests, and support undoable operations</span>.  In this pattern, a commanding object encapsulates everything needed to execute a method in a receiver object.
 In this example, `CommandAbstract.java` is the commander, and `DvdName.java` is the receiver.
 
     public abstract class CommandAbstract {
@@ -1465,7 +1465,7 @@ A UML diagram detailing this relationship is featured below:
 
 ### Interpreter
 
-Given a language, the **Interpreter** pattern <span style="color:blue;">defines a representation for its grammar in addition to an interpreter that uses the representation to interpret sentences in the language</span>.  A context defines a macro language and syntax, parsing input into objects which perform the correct operations on behalf of the client.
+Given a language, the **Interpreter** pattern <span style="color:#0091ff;">defines a representation for its grammar in addition to an interpreter that uses the representation to interpret sentences in the language</span>.  A context defines a macro language and syntax, parsing input into objects which perform the correct operations on behalf of the client.
 
     import java.util.StringTokenizer;
     import java.util.ArrayList;
@@ -1747,7 +1747,7 @@ A UML diagram explaining the above diagram in further detail is pictured below:
 
 ### Iterator
 
-An **Iterator** <span style="color:blue;">provides a way to access the elements of an aggregate object sequentially, without exposing its underlying representation</span>.  Lists and ArrayLists have built-in iterators in Java, whereas more complex data structures might be custom iterators.  Below is a simple example of an iterator in action:
+An **Iterator** <span style="color:#0091ff;">provides a way to access the elements of an aggregate object sequentially, without exposing its underlying representation</span>.  Lists and ArrayLists have built-in iterators in Java, whereas more complex data structures might be custom iterators.  Below is a simple example of an iterator in action:
 
     public interface DvdListIterator {
        public void first();
@@ -1858,7 +1858,7 @@ A UML diagram showing the inner workings of the Iterator pattern is shown below:
 
 ### Mediator
 
-A **Mediator** is <span style="color:blue;">an object that encapsulates how a set of objects interact</span>.  A mediator promotes loose coupling by keeping objects from explicitly referring to each other, allowing programmers to vary their interaction independently.  Code for a simple example of a mediator in action is shown below:
+A **Mediator** is <span style="color:#0091ff;">an object that encapsulates how a set of objects interact</span>.  A mediator promotes loose coupling by keeping objects from explicitly referring to each other, allowing programmers to vary their interaction independently.  Code for a simple example of a mediator in action is shown below:
 
     public abstract class DvdTitle {  
        private String title;
@@ -1973,7 +1973,7 @@ Here is a UML diagram showing how the mediator was used above:
 
 ### Memento
 
-A program using the **Memento** pattern <span style="color:blue;">captures and externalizes an object's internal state so the object can be restored to this state later, without violating encapsulation</span>; one object stores another object's state.  See the example below for details on a memento in action:
+A program using the **Memento** pattern <span style="color:#0091ff;">captures and externalizes an object's internal state so the object can be restored to this state later, without violating encapsulation</span>; one object stores another object's state.  See the example below for details on a memento in action:
 
     import java.util.ArrayList;
     import java.util.ListIterator;
@@ -2079,7 +2079,7 @@ There is no polymorphism in this example, so the UML diagram is irrelevant and w
 
 ### Observer
 
-An **Observer** <span style="color:blue;">defines a one-to-many dependency between objects so that when one object changes state, all of its dependencies are notified and updated automatically</span>; an object notifies other objects if it changes.
+An **Observer** <span style="color:#0091ff;">defines a one-to-many dependency between objects so that when one object changes state, all of its dependencies are notified and updated automatically</span>; an object notifies other objects if it changes.
 
     import java.util.ArrayList;
     import java.util.ListIterator;
@@ -2277,7 +2277,7 @@ Once again, a UML diagram detailing this design pattern consists of three labele
 
 ### State
 
-Programs using the **State** design pattern <span style="color:blue;">empower objects to alter their behavior when their internal states change</span>.  Objects may even appear to change their classes.  An object appears to change its' class when the class it passes calls through to switches itself for a related class.
+Programs using the **State** design pattern <span style="color:#0091ff;">empower objects to alter their behavior when their internal states change</span>.  Objects may even appear to change their classes.  An object appears to change its' class when the class it passes calls through to switches itself for a related class.
 The following example exhibits this well:
 
     public class DvdStateContext {  
@@ -2340,7 +2340,7 @@ The UML diagram for this example follows:
 
 ### Strategy or Policy
 
-The **Strategy** design pattern <span style="color:blue;">lets the algorithm vary independently from clients that use it</span>.  An object controls which of a family of methods, each member called a strategy, is called.  Each class method extends a common base class.  
+The **Strategy** design pattern <span style="color:#0091ff;">lets the algorithm vary independently from clients that use it</span>.  An object controls which of a family of methods, each member called a strategy, is called.  Each class method extends a common base class.  
 
 This pattern reduces coupling by allowing users to program according to an interface, rather than an implementation.  The strategy pattern is also useful when we have multiple algorithms for a specific task, and we want our application to be flexible in choosing any algorithms at runtime.  `Collections.sort` is an example: it takes the Comparator parameter and, based on the different implementations of `Comparator` interfaces, compared objects are sorted in different ways.  The strategy pattern is very similar to the state and command Patterns.
 
@@ -2429,12 +2429,12 @@ It is apparent that this is an example of polymorphism and modularity at work; d
 
 ### Template
 
-With the **Template** design pattern, <span style="color:blue;">programmers define the skeleton of an algorithm in an operation, deferring some steps to subclasses</span>.  The template method lets subclasses redefine specific steps of an algorithm without changing the algorithm's structure.  An abstract class defines various methods and has one non-overridden method, which calls the various methods.
+With the **Template** design pattern, <span style="color:#0091ff;">programmers define the skeleton of an algorithm in an operation, deferring some steps to subclasses</span>.  The template method lets subclasses redefine specific steps of an algorithm without changing the algorithm's structure.  An abstract class defines various methods and has one non-overridden method, which calls the various methods.
 Templating is a common practice even in small systems - type definitions, structs, and generics all utilize the template method in their internal representation.  There is no example for the template pattern in this text, as examples exist everywhere and are easily implementable.  As such, there is no accompanying UML diagram.
 
 ### Visitor
 
-A **Visitor** represents <span style="color:blue;">an operation to be performed on the elements of an object structure</span>.  A visitor lets programmers define new operations without changing the classes and elements of their dependencies.  One or more related classes have the same method, which calls a method specific for themselves in another class.  The example below illustrates well the complex nesting style needed here:
+A **Visitor** represents <span style="color:#0091ff;">an operation to be performed on the elements of an object structure</span>.  A visitor lets programmers define new operations without changing the classes and elements of their dependencies.  One or more related classes have the same method, which calls a method specific for themselves in another class.  The example below illustrates well the complex nesting style needed here:
 
 
     public abstract class TitleBlurbVisitor {
