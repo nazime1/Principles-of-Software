@@ -82,7 +82,7 @@ const App = () => {
   <>
     <RouterProvider router={router} />
     <Helmet>
-    <link rel="icon" type="image/svg+xml" href="/Logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/psoft_turtle_still.png" />
         <title>PSoft Textbook + Tools</title>
     </Helmet>
   </>

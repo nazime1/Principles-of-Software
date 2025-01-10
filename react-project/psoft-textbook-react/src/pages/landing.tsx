@@ -6,7 +6,7 @@ export default function Landing() {
             <div className="landing">
             <h2>Click on the <b>left icon</b> to use tools, or click on the <b>right icon</b> to read the textbook!</h2>
                 <img
-                src="Logo.png"
+                src="new logo.png"
                 className="landinglogo"
                 style={{display: "inline"}}
                 onClick={() => {
